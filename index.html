@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julia López Gómez - Informatics Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="files/icon.png">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <header>
+        <nav>
+            <a href="#research">Research</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#awards">Awards</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <br>
+        <!-- About Section -->
+        <section id="about">
+            <div class="about-container">
+                <img src="files/profile.jpeg" alt="Julia López Gómez" class="profile-pic">
+                <div class="about-text">
+                    <h1>Julia López Gómez</h1>
+                    <p>Informatics Student | Robotics | Machine Learning | R&D</p>
+                    <p>I am a final-year integrated master's student in Informatics at the University of Edinburgh, specializing in Robotics, Machine Learning, and Research & Development. I am actively seeking PhD opportunities in Robot Manipulation, keen to contribute to cutting-edge research in the field.</p>
+                    <button id="downloadCvButton">Download CV</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Section -->
+        <section id="research">
+            <h2>Research</h2>
+            <div class="research-interests-container">
+            <h3>Research Interests</h3>
+            <p>My research interests lie in the intersection of Robotics and Machine Learning, 
+                focusing on Robot Manipulation and Motion Planning. I am currently working on 
+                my master's dissertation, exploring the effects of using a tangent parametrisation 
+                of the configuration space in manipulation planning applications. This project has introduced
+                me to the robotics field, and in the future I am eager to explore further research areas
+                in manipulation, such as soft robotics and planning with dexterous hands.</p>
+            </div>
+            <h3>Research Projects</h3>            
+
+                <div class="collapsible-container">
+                    <span class="date">2024 - 2025</span>
+                    <button class="collapsible">
+                        <span class="title"><b>MINF2 Dissertation: </b>&nbsp;Planning Manipulation in the Tangent Configuration Space</span>
+                        <span class="place">UoE</span>
+                    </button>
+                </div>
+                <div class="content">
+                    <ul>
+                        <li>Continuing the work of my MINF1 dissertation, focusing on the development of an algorithm to compute manipulation plans in the TC-space.</li>
+                        <li>Exploring the use of the C-IRIS algorithm in the TC-space for manipulation planning.</li>
+                        <li>Utilizing the Drake Robotics Toolbox for implementation and visualization.</li>
+                        <li>Expected to contribute to the state-of-the-art in Robot Planning.</li>
+                    </ul>
+                </div>
+
+                <div class="collapsible-container">
+                    <span class="date">Fall 2024</span>
+                    <button class="collapsible">
+                        <span class="title">IoT in Healthcare for Elderly</span>
+                        <span class="place">Principles and Design of IoT Systems Research Project, UoE</span>
+                    </button>
+                </div>
+                <div class="content">
+                    <ul>
+                        <li>Investigating the use of IoT devices to monitor the health of elderly people living alone.</li>
+                        <li>Ongoing project, currently reviewing the literature and identifying the main challenges in the field.</li>
+                    </ul>
+                </div>
+
+
+
+                <div class="collapsible-container">
+                    <span class="date">2023 - 2024</span>
+                    <button class="collapsible">
+                        <span class="title"><b>MINF1 Dissertation: </b>&nbsp;Manipulation Planning with a Robotic Arm: A Tangent Configuration Space Approach</span>
+                        <span class="place">UoE</span>
+                    </button>
+                </div>
+                <div class="content">
+                    <ul>
+                        <li>Formalized the use of a tangent parametrization of the robot configuration space (TC-space) in robot manipulation, leveraging the recent advancements of the C-IRIS algorithm in motion planning.</li>
+                        <li>Proved the scalability of C-IRIS to robots with universal joints.</li>
+                        <li>Utilized the Drake Robotics Toolbox for implementation and visualization.</li>
+                        <li>Leveraged the mathematics of motion and manipulation planning, robot kinematics, algebraic rotations (SO(3) group), and optimization techniques.</li>
+                        <li>Achieved a 1st Class mark.</li>
+                        <li><b>Future Work - MINF2:</b>&nbsp;Produce an algorithm to compute manipulation plans in the TC-space, contributing to the state-of-the-art in Robot Planning.</li>
+                    </ul>
+                    <button id="downloadMINFButton">Download Report</button>
+                </div>
+            
+                <div class="collapsible-container">
+                    <span class="date">Spring 2024</span>
+                    <button class="collapsible">
+                        <span class="title">Enhancing Sheep Detection Techniques with Deep Learning</span>
+                        <span class="place">Machine Learning Practical Group Project, UoE</span>
+                    </button>
+                </div>
+                <div class="content">
+                    <ul>
+                        <li>Collaborated in a team of three to enhance sheep counting accuracy using PyTorch.</li>
+                        <li>Identified challenges of existing literature in detecting occluded sheep and selected a more comprehensive dataset to improve performance in such scenarios.</li>
+                        <li>Implemented transfer learning techniques to adapt pre-trained models for sheep detection, such as SSD and Faster R-CNN.</li>
+                        <li>Utilized Nvidia GPU servers to accelerate model training.</li>
+                    </ul>
+                    <button id="downloadSheepButton">Download Report</button>
+                </div>
+            
+                
+            </section>
+            <br><br>
+        <!-- Experience Section -->
+        <section id="experience">
+            <h2>Work Experience and R&D</h2>
+
+            <div class="collapsible-container">
+                <span class="date">Spring 2024 - Ongoing</span>
+                <button class="collapsible">
+                    <span class="title">Makerspace Student Technician</span>
+                    <span class="place">School of Informatics, UoE</span>
+                </button>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Learning ROS2 and creating student guides from scratch.</li>
+                    <li>Delivered workshops on Raspberry Pi and Arduino to Computer Science students.</li>
+                    <li>Maintained 3D printers, prepared electronic kits, and supported student projects.</li>
+                    <li>Received The Edinburgh Award for my contributions as a Makerspace Student Technician.</li>
+                </ul>
+            </div>
+
+            <div class="collapsible-container">
+                <span class="date">Sep. 2022 - Sep. 2024</span>
+                <button class="collapsible">
+                    <span class="title">Payload Software and Electrical Lead</span>
+                    <span class="place">Endeavour Rockets</span>
+                </button>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Developed a CanSat and a 3-unit CubeSat as payloads for a student-assembled rocket.</li>
+                    <li>Learned and designed the circuit schematics and PCBs of the payload with Altium Designer.</li>
+                    <li>2nd position in Combined 3km Launch Vehicle and CanSat category at Mach-23 competition.</li>
+                    <li>Key skills: Python, Raspberry Pi, embedded programming, parafoil design, etc.</li>
+                    <li>From August 2023: Co-leading the team, mentoring 1st and 3rd Year students.</li>
+                    <li>Research Experiments: Microbial Air Sampler, Simulated Life Search, Albedo Detection, etc.</li>
+                    <li>Invited to Airbus CubeSat day to present our project to other UK satellite student teams.</li>
+                </ul>
+            </div>
+
+            <div class="collapsible-container">
+                <span class="date">Summer 2023</span>
+                <button class="collapsible">
+                    <span class="title">Software Engineering Summer Intern</span>
+                    <span class="place">J.P. Morgan Chase & Co.</span>
+                </button>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Contributed to agile product development using Java, Maven, SQL, and Spring Boot.</li>
+                    <li>Developed backend solutions integrating with Oracle Databases.</li>
+                    <li>Utilized React.js for frontend development in a collaborative environment.</li>
+                </ul>
+            </div>
+
+            <div class="collapsible-container">
+                <span class="date">Fall 2022</span>
+                <button class="collapsible">
+                    <span class="title">Informatics Teaching Support Provider</span>
+                    <span class="place">School of Informatics, UoE</span>
+                </button>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Demonstrator for INF1A - Introduction to Computation.</li>
+                    <li>Ran weekly labs, helping first-year students in their learning of Haskell and Computational Logic.</li>
+                </ul>
+            </div>
+
+        </section>
+
+
+        <!-- University Involvement Section -->
+        <section id="university">
+            <h3>University Involvement and Volunteering</h3>
+
+            <div class="collapsible-container">
+                <span class="date">Sep. 2024 - Ongoing</span>
+                <button class="collapsible">
+                    <span class="title">Informatics Parent</span>
+                    <span class="place">School of Informatics, UoE</span>
+                </button>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Started as an Informatics Parent for incoming first-year students.</li>
+                    <li>Mentoring 11 first-year students, providing guidance and support in their transition to university.</li>
+                </ul>
+            </div>
+
+            <div class="collapsible-container">
+                <span class="date">Sep. 2024 - Ongoing</span>
+                <button class="non-collapsible">
+                    <span class="title">UG5 Informatics Representative</span>
+                    <span class="place">School of Informatics, UoE</span>
+                </button>
+            </div>
+
+
+            <div class="collapsible-container">
+                <span class="date">2022 - 2023</span>
+                <button class="collapsible">
+                    <span class="title">UG3 Informatics Representative</span>
+                    <span class="place">School of Informatics, UoE</span>
+                </button>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Gathered weekly feedback from over 300 students and communicated it with university faculty.</li>
+                    <li>Achieved the transition of a module from online to in-person post-COVID by advocating for student interests with school authorities and professors.</li>                    
+                    <li>Received The Edinburgh Award for Leadership in Student Opportunities.</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <!-- Events Section -->
+        <section id="events">
+            <h3>Events and Latests News</h3>
+
+            <div class="collapsible-container">
+                <span class="date">September 2024</span>
+                <button class="collapsible">
+                    <span class="title">Started as an Informatics Parent</span>
+                    <span class="place">School of Informatics, UoE</span>
+                </button>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Started as an Informatics Parent for incoming first-year students.</li>
+                    <li>Mentoring 11 first-year students, providing guidance and support in their transition to university.</li>
+                </ul>
+            </div>
+
+            <div class="collapsible-container">
+                <span class="date">September 2024</span>
+                <button class="non-collapsible">
+                    <span class="title">Selected as Student Representative for 5th Year Master's Students</span>
+                    <span class="place">School of Informatics, UoE</span>
+                </button>
+            </div>
+
+            <div class="collapsible-container">
+                <span class="date">August 2024</span>
+                <button class="non-collapsible">
+                    <span class="title">Invited to Amazon Campus Summer Series Seminar</span>
+                    <span class="place">Amazon UK</span>
+                </button>
+            </div>
+
+            <div class="collapsible-container" data-date="2024-08-20" data-relevance="4">
+                <span class="date">August 2024</span>
+                <button class="collapsible">
+                    <span class="title">Developed this Portfolio Website!</span>
+                    <span class="place">Personal Project</span>
+                </button>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Designed and developed a personal portfolio website to showcase my academic and professional achievements.</li>
+                    <li>Utilized HTML, CSS, and JavaScript to create a responsive and interactive user experience.</li>
+                    <li>Implemented collapsible sections for a clean and organized layout.</li>
+                    <li>Integrated a particle.js background for a dynamic visual effect.</li>
+                </ul>
+            </div>
+
+            <div class="collapsible-container">
+                <span class="date">February 2024</span>
+                <button class="collapsible">
+                    <span class="title">Airbus CubeSat Day</span>
+                    <span class="place">Airbus UK</span>
+                </button>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Invited to Airbus CubeSat Day to present our Payload project with Endeavour Rockets to other UK satellite student teams.</li>
+                    <li>Our project included the 3-unit CubeSat payload, with an experiment to simulate the search of life in Exoplanets.</li>
+                    <li>Engaged in discussions with industry professionals and other student teams.</li>
+                </ul>
+            </div>
+
+            <div class="collapsible-container">
+                <span class="date">2022 and 2023</span>
+                <button class="non-collapsible">
+                    <span class="title">Participant in HackTheBurgh Hackathon</span>
+                    <span class="place">UoE</span>
+                </button>
+            </div>
+
+            <div class="collapsible-container">
+                <span class="date">November 2022</span>
+                <button class="non-collapsible">
+                    <span class="title">Invited to J.P. Morgan's Women In Technology Event in Glasgow</span>
+                    <span class="place">J.P. Morgan Chase & Co.</span>
+                </button>
+            </div>
+
+            <div class="collapsible-container">
+                <span class="date">November 2022</span>
+                <button class="non-collapsible">
+                    <span class="title">Participant in AdaHack Hackathon, 1st Prize Overall</span>
+                    <span class="place">Edinburgh University Hoppers</span>
+                </button>
+            </div>
+
+            <br>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <!-- Put title and sort control next to each other -->
+            <div class="projects-title">
+                <h3>Other Projects, Competitions, and Experiences</h3>
+                <div id="sort-controls">
+                    <label for="sortOrder">Sort by:</label>
+                    <select id="sortOrder">
+                        <option value="date">Date</option>
+                        <option value="relevance">Relevance</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="collapsible-container" data-date="2023-03-01" data-relevance="3">
+                <span class="date">Spring 2023</span>
+                <button class="collapsible">
+                    <span class="title">Electronic Laundry Folder</span>
+                    <span class="place">System Design Project, UoE</span>
+                </button>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Designed and manufactured an assistive laundry-folding robot.</li>
+                    <li>Used Raspberry Pi, Arduino, and Python for development.</li>
+                    <li>Utilized CAD software (Fusion360) and 3D printing for prototyping.</li>
+                    <li>Collaborated in a team of eight, and presented the results to industry professionals.</li>
+                </ul>
+            </div>
+            
+            <div class="collapsible-container" data-date="2022-11-01" data-relevance="2">
+                <span class="date">Fall 2022</span>
+                <button class="collapsible">
+                    <span class="title">PizzaDronz: Drone-Based Pizza Delivery System</span>
+                    <span class="place">Informatics Large Practical, UoE</span>
+                </button>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Designed and implemented a drone-based delivery system simulating the entire process of delivering pizzas using a RESTful server for data retrieval.</li>
+                    <li>Implemented a comprehensive software architecture consisting of 17 classes, including key components like the App, Drone, and SearchAlgorithm classes.</li>
+                    <li>Developed a drone control algorithm utilizing the Weighted A* search algorithm to optimize delivery routes while adhering to constraints like no-fly zones and battery limitations.</li>
+                    <li>Integrated RESTful API for dynamic data retrieval, including restaurant locations, no-fly zones, and delivery orders.</li>
+                    <li><strong>Technologies Used:</strong> Java, JSON, GeoJSON, Maven.</li>
+                </ul>
+            </div>
+            
+            <div class="collapsible-container" data-date="2022-08-01" data-relevance="4">
+                <span class="date">Summer 2022</span>
+                <button class="collapsible">
+                    <span class="title">Student-Led Individually-Created Course</span>
+                    <span class="place">The University of Edinburgh</span>
+                </button>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Opportunity to create your own extra 20-credit course.</li>
+                    <li>Focused on learning C++, SQL, and Fusion 360.</li>
+                    <li>Reported progress, challenges, and solutions in a reflective work style.</li>
+                </ul>
+            </div>
+            
+            <div class="collapsible-container" data-date="2020-07-01" data-relevance="1">
+                <span class="date">2018 - 2020</span>
+                <button class="collapsible">
+                    <span class="title">CanSat Competition</span>
+                    <span class="place">European Space Agency (ESA)</span>
+                </button>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Assembled a micro-satellite of the size of a soda can for the ESA CanSat Competition.</li>
+                    <li>Manufactured Yagi Antenna for telecommunications with a LoRa system at 868MHz RF.</li>
+                    <li>Achieved a national finalist position twice.</li>
+                    <li>Learned PCB and CAD design, scientific research, electronics, telecommunications, and 3D printing.</li>
+                </ul>
+            </div>
+            
+            <div class="collapsible-container" data-date="2020-02-01" data-relevance="8">
+                <span class="date">February 2020</span>
+                <button class="collapsible">
+                    <span class="title">Mathematic Olympiads and Barcelona Tech Math Contest</span>
+                    <span class="place">Spanish Mathematics Association</span>
+                </button>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Finalist of the Spanish Mathematic Olympiads and participated in the Barcelona Tech Math Contest.</li>
+                    <li>Competed against finalists from across the country for selection in the European Female Mathematics Olympiad.</li>
+                </ul>
+            </div>
+
+            <div class="collapsible-container" data-date="2020-01-01" data-relevance="13">
+                <span class="date">Spring 2020</span>
+                <button class="collapsible">
+                    <span class="title">Canarias Masterclass</span>
+                    <span class="place">Government of The Canary Islands Initiative</span>
+                </button>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Participated in a mentoring program focused on data analysis.</li>
+                    <li>Gained insights from a Data Analyst project manager at a local business in Tenerife.</li>
+                </ul>
+            </div>
+            
+            <div class="collapsible-container" data-date="2019-11-10" data-relevance="6">
+                <span class="date">November 2019</span>
+                <button class="collapsible">
+                    <span class="title">Oshwden Coruña</span>
+                    <span class="place">Xunta de Galicia</span>
+                </button>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Presented a project of a network of meteorological stations at a technological congress in Galicia.</li>
+                    <li>Detected levels of polluting gases in different locations across Spain.</li>
+                    <li>Worked with my high-school robotics team.</li>
+                </ul>
+            </div>
+
+            <div class="collapsible-container" data-date="2019-11-01" data-relevance="12">
+                <span class="date">Fall 2019</span>
+                <button class="collapsible">
+                    <span class="title">Jóvenes Puntales</span>
+                    <span class="place">Government of The Canary Islands Initiative</span>
+                </button>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Finalist in a regional contest focused on recognizing and supporting young talents in various fields.</li>
+                    <li>Participated in projects related to a network of meteorological stations and an app for sharing information about endemic species.</li>
+                    <li>Awarded on the top 15 projects with two projects, amongst 300+ participants.</li>
+                </ul>
+            </div>
+            
+            <div class="collapsible-container" data-date="2019-07-20" data-relevance="7">
+                <span class="date">Summer 2019</span>
+                <button class="collapsible">
+                    <span class="title">National Summer Scientific Campus</span>
+                    <span class="place">Ministry of Education, Spanish Government</span>
+                </button>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Selected at a national level to participate in this campus.</li>
+                    <li>Worked with the robot Pepper and delved into Virtual Reality game development.</li>
+                </ul>
+            </div>
+            
+            <div class="collapsible-container" data-date="2019-06-13" data-relevance="9">
+                <span class="date">2017 - 2019</span>
+                <button class="collapsible">
+                    <span class="title">Canary Islands Scientific Campus and Scientific Challenges</span>
+                    <span class="place">University of La Laguna</span>
+                </button>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Participated in Scientific Summer Programs in 2017 and 2019.</li>
+                    <li>Developed projects in the fields of Mathematics, Physics, and Chemistry.</li>
+                    <li>Won the Scientific Challenges Campus in 2019 with a group of three.</li>
+                    <li>Developed an outreach project to identify endemic species in the Canary Islands and their properties.</li>
+                    <li>Built an app using the MIT App Inventor.</li>
+                    <li>Presented the project to University of La Laguna professors and students.</li>
+                </ul>
+            </div>
+            
+            <div class="collapsible-container" data-date="2019-03-01" data-relevance="10">
+                <span class="date">2017 - 2019</span>
+                <button class="collapsible">
+                    <span class="title">Mathematical Kangaroo</span>
+                    <span class="place">International Mathematics Competition</span>
+                </button>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Participated in the Mathematical Kangaroo, an international mathematical competition for school students.</li>
+                    <li>Ranked in the top 5% of participants three consecutive years at a national level, amongst 3K+ students.</li>
+                </ul>
+            </div>
+            
+            <div class="collapsible-container" data-date="2019-01-01" data-relevance="5">
+                <span class="date">2018 - 2019</span>
+                <button class="collapsible">
+                    <span class="title">Bionic Arm Project</span>
+                    <span class="place">High School Project</span>
+                </button>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Worked for a year on building a bionic arm for a colleague in high school.</li>
+                    <li>Introduced to 3D printing and CAD design.</li>
+                </ul>
+            </div>
+            
+            <div class="collapsible-container" data-date="2016-08-01" data-relevance="11">
+                <span class="date">2016 - 2018</span>
+                <button class="collapsible">
+                    <span class="title">EsTalMat Canarias</span>
+                    <span class="place">Spanish National Mathematics Initiative</span>
+                </button>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Selected for the EsTalMat (Estímulo del Talento Matemático) Canarias program, a national initiative aimed at nurturing young mathematical talent.</li>
+                    <li>EsTalMat selects 15 regional students annually to develop their skills in advanced mathematics and logic.</li>
+                    <li>Engaged in intensive mathematical training, exploring topics beyond the standard curriculum, including advanced problem-solving techniques and theoretical concepts.</li>
+                    <li>Collaborated with peers on complex mathematical challenges, fostering teamwork and enhancing critical thinking abilities.</li>
+                </ul>
+            </div>
+            
+
+        </section>
+
+
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>Programming Languages:</strong> Python (PyTorch, SkLearn), Java (Maven, Spring Boot), C/C++ (Memory Management, Linux, Embedded Programming), Haskell, SQL.</li>
+                <li><strong>Robotics & Machine Learning:</strong> Deep Neural Networks, Convolutional Neural Networks, Motion and Manipulation Planning, Robot Kinematics, Computer Vision, Visual Odometry.</li>
+                <li><strong>Tools & Software:</strong> Altium Designer (PCB Design), Autodesk Fusion 360 (CAD), Git, JSON, Matplotlib, NumPy, Pandas, OpenCV.</li>
+                <li><strong>Mathematics:</strong> Linear and Non-linear Optimization, Multivariable Calculus and Differential Equations, Numerical Linear Algebra.</li>
+                <li><strong>Other:</strong> Raspberry Pi, Arduino, 3D Printing, Laser Cutting, Soldering.</li>
+            </ul>
+        </section>
+
+        <!-- Awards Section -->
+        <section id="awards">
+            <h2>Awards</h2>
+
+            <div class="collapsible-container">
+                <span class="date">June 2024</span>
+                <button class="collapsible">
+                    <span class="title">The Edinburgh Award: Makerspace Student Technician</span>
+                    <span class="place">by UoE</span>
+                </button>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Recognized for technical expertise, mentoring, and delivering workshops in the Makerspace.</li>
+                </ul>
+            </div>
+
+            <div class="collapsible-container">
+                <span class="date">April 2023</span>
+                <button class="collapsible">
+                    <span class="title">The Edinburgh Award: Leadership in Student Opportunities</span>
+                    <span class="place">by UoE</span>
+                </button>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Awarded for leadership, communication, and digital literacy skills as an Informatics Representative.</li>
+                </ul>
+            </div>
+
+            <div class="collapsible-container">
+                <span class="date">November 2022</span>
+                <button class="collapsible">
+                    <span class="title">1st Prize Overall in AdaHack Hackathon: Twitter Solves Rubik’s Cube</span>
+                    <span class="place">by Edinburgh University Hoppers</span>
+                </button>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Awarded for best overall project in the Ada Hack Hackathon.</li>
+                    <li>Used Twitter's API to gather moves from Rubik's cube and update a 3D visualization live.</li>
+                </ul>
+            </div>
+
+            <div class="collapsible-container">
+                <span class="date">July 2020</span>
+                <button class="collapsible">
+                    <span class="title">Award of Academic Excellence</span>
+                    <span class="place">by University of La Laguna</span>
+                </button>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Top 10 academic performances in the EBAU (district of S/C de Tenerife) among over 5,000 students.</li>
+                    <li>Awarded for outstanding academic achievements during the last two years of High School and the National Exam of Access to University (EBAU).</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Certifications Section -->
+        <section id="certifications">
+            <h2>Certifications</h2>
+
+            <div class="collapsible-container">
+                <span class="date">Mar 2023</span>
+                <div class="certification">
+                    <span class="title">Public Speaking for Non-Native English Speakers</span>
+                    <span class="place">LinkedIn Learning</span>
+                </div>
+            </div>
+    
+            <div class="collapsible-container">
+                <span class="date">Jan 2023</span>
+                <div class="certification">
+                    <span class="title">Electronics Foundations: Fundamentals</span>
+                    <span class="place">LinkedIn Learning</span>
+                </div>
+            </div>
+
+            <div class="collapsible-container">
+                <span class="date">Jan 2023</span>
+                <div class="certification">
+                    <span class="title">Memorization and Rehearsal Tips for Public Speaking</span>
+                    <span class="place">LinkedIn Learning</span>
+                </div>
+            </div>
+    
+            <div class="collapsible-container">
+                <span class="date">Aug 2022</span>
+                <div class="certification">
+                    <span class="title">Beginning C++ Programming - From Beginner to Beyond</span>
+                    <span class="place">Udemy</span>
+                </div>
+            </div>
+    
+            <div class="collapsible-container">
+                <span class="date">Jul 2022</span>
+                <div class="certification">
+                    <span class="title">Fusion 360 Beginners Course</span>
+                    <span class="place">Udemy</span>
+                </div>
+            </div>
+    
+            <div class="collapsible-container">
+                <span class="date">Jul 2022</span>
+                <div class="certification">
+                    <span class="title">The Complete SQL Bootcamp 2022: Go from Zero to Hero</span>
+                    <span class="place">Udemy</span>
+                </div>
+            </div>
+    
+        </section>
+        
+        <br>
+    </main>
+
+    <footer id="contact">
+        <h2>Contact</h2>
+        <p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Aiga_mail_white.svg" alt="Email Icon" class="icon">
+            <a href="mailto:J.Lopez-Gomez@sms.ed.ac.uk" style="margin-right: 30px;">J.Lopez-Gomez@sms.ed.ac.uk</a>
+
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Phone_-_Delapouite_-_white_-_game-icons.svg" alt="Phone Icon" class="icon" style="transform: rotate(-90deg);">
+            <a href="tel:+4407857973108" style="margin-right: 30px;">+44 (0) 7857 973 108</a>
+            
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn Icon" class="icon">
+            <a href="http://www.linkedin.com/in/julia-lopez-gomez" target="_blank">linkedin.com/in/julia-lopez-gomez</a>
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+
+    
+</body>
+</html>

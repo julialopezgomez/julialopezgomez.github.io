@@ -1,0 +1,343 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Add margins for the page content */
+main {
+    max-width: 65%; /* Smaller margins */
+    margin: 20px auto;
+    padding: 0 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styling */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Section Styling */
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+/* About Section with Profile Picture */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%; /* adjust this value as needed */
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover; /* Ensures the image fits and is centered */
+    
+}
+
+.about-text {
+    flex: 1;
+}
+
+
+/* Collapsible Container Styling */
+.collapsible-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    width: 100%; /* Ensure the container spans the full width */
+    overflow: hidden; /* Prevents the container from expanding */
+}
+
+.collapsible-container .date {
+    font-style: italic;
+    color: #666;
+    margin-right: 10px; /* Adjust this to control spacing between date and button */
+    white-space: nowrap; /* Prevent the date from wrapping to a new line */
+    flex-shrink: 0; /* Prevents the date from shrinking */
+    width: 170px; /* Ensure a consistent width for the date column */
+    text-align: left;
+}
+
+/* Collapsible Buttons Styling */
+.collapsible {
+    background-color: #eee;
+    color: #333;
+    cursor: pointer;
+    padding: 5px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    flex-grow: 1; /* Ensures the button takes up the remaining space */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    overflow: hidden;
+}
+
+.collapsible::before {
+    content: "▸";
+    margin-right: 10px;
+    font-size: 12px;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+}
+
+.collapsible.active::before {
+    transform: rotate(90deg);
+}
+
+.collapsible.active {
+    font-weight: bold; /* Make text bold when the collapsible is active */
+}
+
+.collapsible .title {
+    flex-grow: 1; /* Allow the title to take up remaining space */
+    text-align: left;
+}
+
+.collapsible .place {
+    margin-left: auto; /* Pushes the place text to the far right */
+    font-style: italic;
+    color: #666;
+    white-space: nowrap; /* Prevents wrapping */
+    padding-left: 10px; /* Adds some padding to the left to separate from title */
+}
+
+.non-collapsible {
+    background-color: #eee;
+    color: #333;
+    cursor: pointer;
+    padding: 5px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    flex-grow: 1; /* Ensures the button takes up the remaining space */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    overflow: hidden;
+}
+
+.non-collapsible .title {
+    flex-grow: 1; /* Allow the title to take up remaining space */
+    text-align: left;
+    margin-left: 17px;;
+}
+
+.non-collapsible .place {
+    margin-left: auto; /* Pushes the place text to the far right */
+    font-style: italic;
+    color: #666;
+    white-space: nowrap; /* Prevents wrapping */
+    padding-left: 10px; /* Adds some padding to the left to separate from title */
+}
+
+
+
+.content {
+    box-sizing: border-box;
+    padding-left: 200px;
+    display: none;
+    text-align: left;
+    width: 100%; /* Ensures the content takes up full width */
+    overflow: auto;
+    word-wrap: break-word;
+}
+
+.content ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.content ul li {
+    margin-bottom: 5px;
+}
+
+/* Download CV Button Styling */
+#downloadCvButton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#downloadCvButton:hover {
+    background-color: #555;
+}
+
+/* Download MINF Button Styling */
+#downloadMINFButton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6e6e6e;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#downloadMINFButton:hover {
+    background-color: #555;
+}
+
+/* Download Sheep Button Styling */
+#downloadSheepButton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6e6e6e;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#downloadSheepButton:hover {
+    background-color: #555;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .icon {
+    width: 24px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: transparent;
+}
+
+.certification {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    width: 100%; /* Ensures the container spans the full width */
+}
+
+.certification .title {
+    font-weight: bold;
+    flex-grow: 1;  /* Ensures the title takes up available space */
+}
+
+.certification .place {
+    font-style: italic;
+    color: #666;
+    text-align: right;
+    white-space: nowrap; /* Prevents the place text from wrapping */
+    margin-left: 20px; /* Adds a little space between the title and place */
+}
+
+.research-interests-container {
+    width: 100%; /* Adjust this value as needed */
+    align-items: center;
+    justify-content: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#sort-controls {
+    margin-bottom: 15px;
+}
+
+#sortOrder {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+
+.projects-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#sort-controls {
+    margin-left: auto;
+    margin-top: auto;
+}
