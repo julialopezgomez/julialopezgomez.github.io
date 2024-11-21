@@ -62,6 +62,11 @@ document.addEventListener("DOMContentLoaded", () => {
   downloadSheepButton.addEventListener("click", () => {
       window.open('files/sheep.pdf', '_blank');
   });
+
+  const downloadIoTButton = document.getElementById("downloadIoTButton");
+  downloadIoTButton.addEventListener("click", () => {
+      window.open('files/IoT_healthcare.pdf', '_blank');
+  });
 });
 
 /* ---- particles.js config ---- */
