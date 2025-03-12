@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const downloadIoTButton = document.getElementById("downloadIoTButton");
   downloadIoTButton.addEventListener("click", () => {
-      window.open('files/IoT_healthcare.pdf', '_blank');
+      window.open('files/IoT_cnns_for_HAR.pdf', '_blank');
   });
 
   const downloadIoTButton2 = document.getElementById("downloadIoTButton2");
