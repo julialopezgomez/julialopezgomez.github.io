@@ -67,6 +67,11 @@ document.addEventListener("DOMContentLoaded", () => {
   downloadIoTButton.addEventListener("click", () => {
       window.open('files/IoT_healthcare.pdf', '_blank');
   });
+
+  const downloadIoTButton2 = document.getElementById("downloadIoTButton2");
+  downloadIoTButton.addEventListener("click", () => {
+      window.open('files/IoT_healthcare.pdf', '_blank');
+  });
 });
 
 /* ---- particles.js config ---- */
