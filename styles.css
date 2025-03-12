@@ -271,7 +271,25 @@ h1 {
     margin-bottom: 20px;
 }
 
+#downloadIoTButton2 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6e6e6e;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
 #downloadIoTButton:hover {
+    background-color: #555;
+}
+
+#downloadIoTButton2:hover {
     background-color: #555;
 }
 
