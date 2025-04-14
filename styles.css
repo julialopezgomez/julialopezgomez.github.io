@@ -238,6 +238,24 @@ h1 {
     background-color: #555;
 }
 
+/* Download MINF2 Button Styling */
+#downloadMINF2Button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6e6e6e;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#downloadMINF2Button:hover {
+    background-color: #555;
+}
+
 /* Download Sheep Button Styling */
 #downloadSheepButton {
     display: inline-block;

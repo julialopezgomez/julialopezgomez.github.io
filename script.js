@@ -57,6 +57,12 @@ document.addEventListener("DOMContentLoaded", () => {
       window.open('files/MINF1.pdf', '_blank');
   });
 
+  // Button to download the MINF2
+  const downloadMinf2Button = document.getElementById("downloadMINF2Button");
+  downloadMinf2Button.addEventListener("click", () => {
+      window.open('files/MINF2.pdf', '_blank');
+  });
+
   // Button to download the Sheep
   const downloadSheepButton = document.getElementById("downloadSheepButton");
   downloadSheepButton.addEventListener("click", () => {
