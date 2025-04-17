@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const downloadIoTButton2 = document.getElementById("downloadIoTButton2");
-  downloadIoTButton.addEventListener("click", () => {
+  downloadIoTButton2.addEventListener("click", () => {
       window.open('files/IoT_healthcare.pdf', '_blank');
   });
 });
