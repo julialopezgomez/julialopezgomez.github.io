@@ -1,3 +1,3 @@
 # Julia López Gómez - Informatics Portfolio
 
-This is the Informatics Portfolio of Julia López Gómez, showcasing various projects and achievements in the field of informatics. The portfolio includes a collection of work samples, project descriptions, and relevant information about Julia's skills and experience in informatics.
+Hello! I'm Julia, a first-year PhD student in Robotics and AI at the University of Edinburgh. This portfolio summarises my academic and research journey, showcasing projects, publications, skills and events I've been involved in. I hope this gives you a good overview of my work and interests :).
