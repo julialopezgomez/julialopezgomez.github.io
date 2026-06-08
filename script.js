@@ -1,184 +1,107 @@
+// Theme + particles setup for a simple academic layout.
 document.addEventListener("DOMContentLoaded", () => {
-  const coll = document.querySelectorAll(".collapsible");
-  coll.forEach((collapsible) => {
-      collapsible.addEventListener("click", function() {
-          this.classList.toggle("active");
-          // Find the closest .collapsible-container and then find the next .content
-          const content = this.closest('.collapsible-container').nextElementSibling;
-          if (content && content.classList.contains('content')) {
-              if (content.style.display === "block") {
-                  content.style.display = "none";
-              } else {
-                  content.style.display = "block";
-              }
-          }
+  const root = document.documentElement;
+  const toggle = document.getElementById("themeToggle");
 
-      });
-  });
+  const storedTheme = localStorage.getItem("theme");
+  const preferredDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const initialTheme = storedTheme || (preferredDark ? "dark" : "light");
 
+  applyTheme(initialTheme);
 
-  // Sorting functionality
-  const sortOrderSelect = document.getElementById("sortOrder");
-  sortOrderSelect.addEventListener("change", sortProjects);
-
-  function sortProjects() {
-      const sortOrder = sortOrderSelect.value;
-      const projectsContainer = document.querySelector("#projects");
-      const projectItems = Array.from(projectsContainer.querySelectorAll(".collapsible-container"));
-
-      projectItems.sort((a, b) => {
-          if (sortOrder === "date") {
-              return new Date(b.dataset.date) - new Date(a.dataset.date);
-          } else if (sortOrder === "relevance") {
-              return a.dataset.relevance - b.dataset.relevance;
-          }
-      });
-
-      projectItems.forEach(item => {
-        const content = item.closest('.collapsible-container').nextElementSibling;
-        projectsContainer.appendChild(item);
-        projectsContainer.appendChild(content);
-      }); 
+  if (toggle) {
+    toggle.addEventListener("click", () => {
+      const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
+      applyTheme(nextTheme);
+      localStorage.setItem("theme", nextTheme);
+    });
   }
-  
-  // Initial sorting by date
-  sortProjects();
 
+  function applyTheme(theme) {
+    root.dataset.theme = theme;
+    if (toggle) {
+      const isDark = theme === "dark";
+      toggle.textContent = isDark ? "☀️" : "🌙";
+      toggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+    }
+    initParticles(theme);
+  }
 
-  // Button to download the CV
-  const downloadCvButton = document.getElementById("downloadCvButton");
-  downloadCvButton.addEventListener("click", () => {
-      window.open('files/JULIA LOPEZ GOMEZ_CV.pdf', '_blank');
-  });
+  function initParticles(theme) {
+    if (typeof particlesJS !== "function") {
+      return;
+    }
 
-  // Button to download the MINF
-  const downloadMinfButton = document.getElementById("downloadMINFButton");
-  downloadMinfButton.addEventListener("click", () => {
-      window.open('files/MINF1.pdf', '_blank');
-  });
+    const palette = theme === "dark"
+      ? { particle: "#cbd5e1", link: "#64748b" }
+      : { particle: "#475569", link: "#94a3b8" };
 
-  // Button to download the MINF2
-  const downloadMinf2Button = document.getElementById("downloadMINF2Button");
-  downloadMinf2Button.addEventListener("click", () => {
-      window.open('files/MINF2.pdf', '_blank');
-  });
+    // Clean existing canvas before reinitializing.
+    if (window.pJSDom && window.pJSDom.length > 0) {
+      window.pJSDom.forEach((instance) => {
+        instance.pJS.fn.vendors.destroypJS();
+      });
+      window.pJSDom = [];
+    }
 
-  // Button to download the Sheep
-  const downloadSheepButton = document.getElementById("downloadSheepButton");
-  downloadSheepButton.addEventListener("click", () => {
-      window.open('files/sheep.pdf', '_blank');
-  });
-
-  const downloadIoTButton = document.getElementById("downloadIoTButton");
-  downloadIoTButton.addEventListener("click", () => {
-      window.open('files/IoT_cnns_for_HAR.pdf', '_blank');
-  });
-
-  const downloadIoTButton2 = document.getElementById("downloadIoTButton2");
-  downloadIoTButton2.addEventListener("click", () => {
-      window.open('files/IoT_healthcare.pdf', '_blank');
-  });
-
-  const downloadSegmentationButton = document.getElementById("downloadSegmentationButton");
-  downloadSegmentationButton.addEventListener("click", () => {
-      window.open('files/segmentation.pdf', '_blank');
-  });
-});
-
-/* ---- particles.js config ---- */
-particlesJS("particles-js", {
-  "particles": {
-    "number": {
-      "value": 150,
-      "density": {
-        "enable": true,
-        "value_area":1000
-      }
-    },
-    "color": {
-      "value": "#333"
-    },
-    
-    "shape": {
-      "type": "circle",
-      "stroke": {
-        "width": 0,
-        "color": "#fff"
-      },
-      "polygon": {
-        "nb_sides": 5
-      },
-      "image": {
-        "src": "img/github.svg",
-        "width": 100,
-        "height": 100
-      }
-    },
-    "opacity": {
-      "value": 0.6,
-      "random": false,
-      "anim": {
-        "enable": false,
-        "speed": 1,
-        "opacity_min": 0.1,
-        "sync": false
-      }
-    },
-    "size": {
-      "value": 4,
-      "random": true,
-      "anim": {
-        "enable": true,
-        "speed": 40,
-        "size_min": 0.2,
-        "sync": false
-      }
-    },
-    "line_linked": {
-      "enable": true,
-      "distance": 160,
-      "color": "#333",
-      "opacity": 0.6,
-      "width": 1
-    },
-  },
-  "interactivity": {
-    "detect_on": "canvas",
-    "events": {
-      "onhover": {
-        "enable": true,
-        "mode": "grab"
-      },
-      "onclick": {
-        "enable": false
-      },
-      "resize": true
-    },
-    "modes": {
-      "grab": {
-        "distance": 140,
-        "line_linked": {
-          "opacity": 1
+    particlesJS("particles-js", {
+      particles: {
+        number: {
+          value: 55,
+          density: {
+            enable: true,
+            value_area: 950
+          }
+        },
+        color: {
+          value: palette.particle
+        },
+        shape: {
+          type: "circle"
+        },
+        opacity: {
+          value: 0.16,
+          random: true,
+          anim: {
+            enable: false
+          }
+        },
+        size: {
+          value: 2.1,
+          random: true
+        },
+        line_linked: {
+          enable: true,
+          distance: 145,
+          color: palette.link,
+          opacity: 0.16,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 0.7,
+          direction: "none",
+          random: false,
+          straight: false,
+          out_mode: "out",
+          bounce: false
         }
       },
-      "bubble": {
-        "distance": 400,
-        "size": 40,
-        "duration": 2,
-        "opacity": 8,
-        "speed": 3
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: {
+            enable: false,
+            mode: "grab"
+          },
+          onclick: {
+            enable: false,
+            mode: "push"
+          },
+          resize: true
+        }
       },
-      "repulse": {
-        "distance": 200,
-        "duration": 4
-      },
-      "push": {
-        "particles_nb": 4
-      },
-      "remove": {
-        "particles_nb": 2
-      }
-    }
-  },
-  "retina_detect": true
+      retina_detect: true
+    });
+  }
 });
