@@ -33,8 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const palette = theme === "dark"
-      ? { particle: "#cbd5e1", link: "#64748b" }
-      : { particle: "#475569", link: "#94a3b8" };
+      ? { particle: "#dfeeff", link: "#afc3de" }
+      : { particle: "#333", link: "#555d68" };
 
     // Clean existing canvas before reinitializing.
     if (window.pJSDom && window.pJSDom.length > 0) {
@@ -47,10 +47,10 @@ document.addEventListener("DOMContentLoaded", () => {
     particlesJS("particles-js", {
       particles: {
         number: {
-          value: 55,
+          value: 100,
           density: {
             enable: true,
-            value_area: 950
+            value_area: 1000
           }
         },
         color: {
@@ -60,14 +60,14 @@ document.addEventListener("DOMContentLoaded", () => {
           type: "circle"
         },
         opacity: {
-          value: 0.16,
+          value: 0.8,
           random: true,
           anim: {
             enable: false
           }
         },
         size: {
-          value: 2.1,
+          value: 3.1,
           random: true
         },
         line_linked: {
@@ -91,11 +91,11 @@ document.addEventListener("DOMContentLoaded", () => {
         detect_on: "canvas",
         events: {
           onhover: {
-            enable: false,
+            enable: true,
             mode: "grab"
           },
           onclick: {
-            enable: false,
+            enable: true,
             mode: "push"
           },
           resize: true
