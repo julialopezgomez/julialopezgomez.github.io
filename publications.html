@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications | Julia López Gómez</title>
-    <meta name="description" content="Publications by Julia López Gómez, PhD student in Robotics and AI at the University of Edinburgh.">
+    <title>Publications, Talks &amp; Projects | Julia López Gómez</title>
+    <meta name="description" content="Publications, talks, posters, and selected robotics research projects by Julia López Gómez.">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="files/icon.png">
     <script>
@@ -12,9 +12,9 @@
       (function () {
         try {
           var stored = localStorage.getItem("theme");
-          var theme = stored || "dark";
+          var theme = stored || "light";
           document.documentElement.setAttribute("data-theme", theme);
-        } catch (e) { /* dark is already set on the root element */ }
+        } catch (e) { /* light is already set on the root element */ }
       })();
     </script>
 </head>
@@ -32,7 +32,7 @@
             </div>
             <div class="nav-actions">
                 <a class="cv-link" href="files/JULIA%20LOPEZ%20GOMEZ_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
-                <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to light mode"><svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><line x1="12" y1="1.5" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22.5"/><line x1="4.2" y1="4.2" x2="6" y2="6"/><line x1="18" y1="18" x2="19.8" y2="19.8"/><line x1="1.5" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22.5" y2="12"/><line x1="4.2" y1="19.8" x2="6" y2="18"/><line x1="18" y1="6" x2="19.8" y2="4.2"/></svg><svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+                <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to dark mode"><svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><line x1="12" y1="1.5" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22.5"/><line x1="4.2" y1="4.2" x2="6" y2="6"/><line x1="18" y1="18" x2="19.8" y2="19.8"/><line x1="1.5" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22.5" y2="12"/><line x1="4.2" y1="19.8" x2="6" y2="18"/><line x1="18" y1="6" x2="19.8" y2="4.2"/></svg><svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
                 <a class="icon-link" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=J.Lopez-Gomez%40sms.ed.ac.uk" target="_blank" rel="noopener noreferrer" aria-label="Email Julia" title="Compose an email to Julia">
                     <svg viewBox="0 0 16 16" role="img" aria-hidden="true"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-.5a.5.5 0 0 0-.32.11L8 8.69l6.32-5.08A.5.5 0 0 0 14 3.5H2zm13 1.23-4.86 3.9L15 12.69V4.73zm-.8 8.27-5.19-4.16-.7.56a.5.5 0 0 1-.62 0l-.7-.56L1.8 13h12.4zm-13.4-.31 4.86-4.06L1 4.73v7.96z"/></svg>
                 </a>
@@ -47,6 +47,12 @@
     </header>
 
     <main>
+        <header class="page-heading">
+            <p class="eyebrow">Papers · Talks · Posters · Projects</p>
+            <h1>Publications, Talks &amp; Projects</h1>
+            <p>Peer-reviewed work, research talks and posters, and selected projects in robot manipulation, planning, learning, and verification.</p>
+        </header>
+
         <section id="publications" class="section-card">
             <h2>Publications</h2>
             <p>Peer-reviewed publications are coming soon.</p>
@@ -56,55 +62,84 @@
         <section id="talks" class="section-card">
             <h2>Talks &amp; Posters</h2>
 
-            <details>
-                <summary>
-                    <span class="entry-title">Manipulation Planning with Convex Decompositions of C-free and NLP-Sampling</span>
-                    <span class="entry-meta">13 August 2026 · IPAB Workshop, University of Edinburgh</span>
-                </summary>
-                <ul>
-                    <li>Manipulation planning requires robots to navigate high-dimensional configuration spaces shaped by collision avoidance, kinematic limits, contacts, and task constraints, which make the feasible space narrow, disconnected, and hard to describe.</li>
-                    <li>Presented a global manipulation-planning framework that decomposes the collision-free configuration space (C-free) into a union of convex sets, computing trajectories via convex optimisation over a graph of convex sets (GCS).</li>
-                    <li>Extended these algorithms beyond collision-free motion to also represent feasible grasping configurations as convex sets, scaling toward higher-dimensional systems through recent advances in NLP sampling.</li>
-                    <li>The resulting planner is complete within the convex decomposition, and optimises grasp selection and motion under their respective costs without assuming global optimality for the original non-convex problem.</li>
-                </ul>
-                <div class="button-row">
-                    <a class="button small" href="files/IPAB_workshop_slides.pdf" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 0h5.5L14 4.5V15a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1zm5 1.5V5h3.5L9 1.5zM4.5 8h7v1h-7V8zm0 2.5h7v1h-7v-1z"/></svg><span>Download Slides</span></a>
-                </div>
-            </details>
+            <div class="tagged-row">
+                <details>
+                    <summary>
+                        <span class="entry-title">Manipulation Planning with Convex Decompositions of C-free and NLP-Sampling</span>
+                        <span class="entry-meta">13 August 2026 · IPAB Workshop, University of Edinburgh</span>
+                        <span class="entry-kind">Talk</span>
+                    </summary>
+                    <ul class="entry-summary-list">
+                        <li>Presented at an <a href="https://informatics.ed.ac.uk/ipab/events" target="_blank" rel="noopener noreferrer">IPAB Workshop</a>, an informal seminar series for IPAB staff and students to share ongoing work with the institute's research community.</li>
+                        <li>Introduced my manipulation-planning work: decomposing collision-free space into convex regions, planning with Graphs of Convex Sets, and extending the representation to grasp-feasible configurations with nonlinear-programming sampling.</li>
+                    </ul>
+                    <div class="button-row">
+                        <a class="button small" href="files/IPAB_workshop_slides.pdf" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 0h5.5L14 4.5V15a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1zm5 1.5V5h3.5L9 1.5zM4.5 8h7v1h-7V8zm0 2.5h7v1h-7v-1z"/></svg><span>Download Slides</span></a>
+                    </div>
+                </details>
+            </div>
 
-            <details>
-                <summary>
-                    <span class="entry-title">Poster and project pitch on long-horizon manipulation planning</span>
-                    <span class="entry-meta">9–13 February 2026 · ROMANDIC Winter School, Kranjska Gora, Slovenia</span>
-                </summary>
-                <ul>
-                    <li>Presented a poster and a short project pitch on my PhD research.</li>
-                </ul>
-                <div class="button-row">
-                    <a class="button small" href="files/ROMANDIC_poster.pdf" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 0h5.5L14 4.5V15a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1zm5 1.5V5h3.5L9 1.5zM4.5 8h7v1h-7V8zm0 2.5h7v1h-7v-1z"/></svg><span>Download Poster</span></a>
-                </div>
-            </details>
+            <div class="tagged-row">
+                <details>
+                    <summary>
+                        <span class="entry-title">Poster and project pitch on long-horizon manipulation planning</span>
+                        <span class="entry-meta">9–13 February 2026 · ROMANDIC Winter School, Kranjska Gora, Slovenia</span>
+                        <span class="entry-kind">Poster &amp; Pitch</span>
+                    </summary>
+                    <ul>
+                        <li>Presented a poster and a short project pitch on my PhD research.</li>
+                    </ul>
+                    <div class="button-row">
+                        <a class="button small" href="files/ROMANDIC_poster.pdf" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 0h5.5L14 4.5V15a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1zm5 1.5V5h3.5L9 1.5zM4.5 8h7v1h-7V8zm0 2.5h7v1h-7v-1z"/></svg><span>Download Poster</span></a>
+                    </div>
+                </details>
+            </div>
         </section>
 
         <!-- Research projects: not peer-reviewed publications, but the
              research experience and written material behind them. -->
         <section id="research-projects" class="section-card">
             <h2>Research Projects</h2>
-            <details>
+            <details class="research-thread-entry">
                 <summary>
-                    <span class="entry-title">Manipulation Planning with Convex Decompositions of C-free and NLP Sampling</span>
-                    <span class="entry-meta">2025 - present · Continuing my MInf work, University of Edinburgh</span>
+                    <span class="entry-title">Manipulation Planning with Convex Decompositions</span>
+                    <span class="entry-meta">2023–present · From MInf dissertations to current PhD research, University of Edinburgh</span>
                 </summary>
-                <ul>
-                    <li>Extending the convex-decomposition planner from my MInf dissertations beyond collision-free motion, toward grasp, placement, kinematic, and task-constrained feasible sets.</li>
-                    <li>Combining Drake inverse kinematics and SceneGraph collision checking with nonlinear hit-and-run (NHR) sampling to generate diverse full-arm feasible configurations.</li>
-                    <li>Fitting mode- and submode-specific convex regions and studying the transition sets between them: grasp and placement feasibility produce disconnected modes, motivating further decomposition into submodes.</li>
-                    <li>Planning over these regions with Graphs of Convex Sets (GCS), so motion can be computed by convex optimisation rather than re-solving the original non-convex problem from scratch.</li>
-                    <li>In a 4-DoF comparison of collision-free-space decompositions, IRIS-NP produced 8 regions, IRIS-NP2 17, and IRIS-ZO 39, with NP2 and ZO giving more conservative decompositions.</li>
-                </ul>
+                <div class="thread-timeline">
+                    <section class="thread-stage">
+                        <span class="thread-date">2025–present · PhD research</span>
+                        <h4>Reachability representations for long-horizon manipulation</h4>
+                        <ul>
+                            <li>Extending the planner beyond collision-free motion toward grasp, placement, kinematic, and task-constrained feasible sets.</li>
+                            <li>Combining Drake inverse kinematics and SceneGraph collision checking with nonlinear hit-and-run sampling to generate diverse full-arm feasible configurations.</li>
+                            <li>Fitting mode- and submode-specific convex regions, studying transition sets between them, and planning over the resulting Graph of Convex Sets.</li>
+                        </ul>
+                    </section>
+
+                    <section class="thread-stage">
+                        <span class="thread-date">2024–2025 · MInf Project Part 2</span>
+                        <h4>Planning over convex decompositions of free configuration space</h4>
+                        <ul>
+                            <li>Developed a manipulation planner using IRIS variants, Graphs of Convex Sets, and Mixed-Integer Quadratic Programming.</li>
+                            <li>Implemented and visualised the planner using the Drake Robotics Toolbox.</li>
+                            <li>Awarded a First-Class mark.</li>
+                        </ul>
+                    </section>
+
+                    <section class="thread-stage">
+                        <span class="thread-date">2023–2024 · MInf Project Part 1</span>
+                        <h4>A tangent configuration-space approach</h4>
+                        <ul>
+                            <li>Formalised tangent parameterisations for robot configuration spaces and applied C-IRIS to manipulation planning.</li>
+                            <li>Demonstrated the scalability of C-IRIS to robots with universal joints; awarded a First-Class mark.</li>
+                        </ul>
+                    </section>
+                </div>
 
                 <div class="button-row">
-                    <a class="button small ghost" href="https://github.com/julialopezgomez/optimisation-based-manipulation-planner" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.1 0 0 .67-.21 2.2.82a7.52 7.52 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.09.16 1.9.08 2.1.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg><span>GitHub</span></a>
+                    <a class="button small ghost" href="https://github.com/julialopezgomez/optimisation-based-manipulation-planner" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.1 0 0 .67-.21 2.2.82a7.52 7.52 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.09.16 1.9.08 2.1.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg><span>Current GitHub</span></a>
+                    <a class="button small" href="files/MINF2.pdf" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 0h5.5L14 4.5V15a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1zm5 1.5V5h3.5L9 1.5zM4.5 8h7v1h-7V8zm0 2.5h7v1h-7v-1z"/></svg><span>MInf2 Report</span></a>
+                    <a class="button small" href="files/MINF1.pdf" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 0h5.5L14 4.5V15a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1zm5 1.5V5h3.5L9 1.5zM4.5 8h7v1h-7V8zm0 2.5h7v1h-7v-1z"/></svg><span>MInf1 Report</span></a>
                 </div>
             </details>
 
@@ -122,6 +157,7 @@
 
                 <div class="button-row">
                     <a class="button small ghost" href="https://github.com/julialopezgomez/drone_nn_paper" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.1 0 0 .67-.21 2.2.82a7.52 7.52 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.09.16 1.9.08 2.1.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg><span>GitHub</span></a>
+                    <a class="button small" href="files/drone_control_verification_report.pdf" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 0h5.5L14 4.5V15a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1zm5 1.5V5h3.5L9 1.5zM4.5 8h7v1h-7V8zm0 2.5h7v1h-7v-1z"/></svg><span>Download Report</span></a>
                 </div>
             </details>
 
@@ -139,25 +175,6 @@
 
                 <div class="button-row">
                     <a class="button small ghost" href="https://github.com/julialopezgomez/monte-carlo-manipulation" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.1 0 0 .67-.21 2.2.82a7.52 7.52 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.09.16 1.9.08 2.1.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg><span>GitHub</span></a>
-                </div>
-            </details>
-
-
-            <details>
-                <summary>
-                    <span class="entry-title">MINF2 Dissertation: Manipulation Planning in Convex Decompositions of the Free Configuration Space</span>
-                    <span class="entry-meta">2024 - 2025 · UoE</span>
-                </summary>
-                <ul>
-                    <li>Continued the work of my MINF1 dissertation, developing an algorithm to compute manipulation plans in optimisation-based settings.</li>
-                    <li>Developed a manipulation planner capable of operating in optimisation-based settings through convex decomposition techniques (IRIS variants) and Mixed-Integer Quadratic Programming.</li>
-                    <li>Used the Drake Robotics Toolbox for implementation and visualization.</li>
-                    <li>Supervision: Dr Steve Tonneau.</li>
-                </ul>
-
-                <div class="button-row">
-                    <a class="button small ghost" href="https://github.com/julialopezgomez/minf2-repo" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.1 0 0 .67-.21 2.2.82a7.52 7.52 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.09.16 1.9.08 2.1.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg><span>GitHub</span></a>
-                    <a class="button small" href="files/MINF2.pdf" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 0h5.5L14 4.5V15a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1zm5 1.5V5h3.5L9 1.5zM4.5 8h7v1h-7V8zm0 2.5h7v1h-7v-1z"/></svg><span>Download Report</span></a>
                 </div>
             </details>
 
@@ -199,28 +216,6 @@
                 <div class="button-row">
                     <a class="button small" href="files/IoT_cnns_for_HAR.pdf" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 0h5.5L14 4.5V15a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1zm5 1.5V5h3.5L9 1.5zM4.5 8h7v1h-7V8zm0 2.5h7v1h-7v-1z"/></svg><span>Download Report: Human Activity Recognition</span></a>
                     <a class="button small" href="files/IoT_healthcare.pdf" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 0h5.5L14 4.5V15a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1zm5 1.5V5h3.5L9 1.5zM4.5 8h7v1h-7V8zm0 2.5h7v1h-7v-1z"/></svg><span>Download Report: IoT for Healthcare in the Elderly</span></a>
-                </div>
-            </details>
-
-
-            <details>
-                <summary>
-                    <span class="entry-title">MINF1 Dissertation: Manipulation Planning with a Robotic Arm: A Tangent Configuration Space Approach</span>
-                    <span class="entry-meta">2023 - 2024 · UoE</span>
-                </summary>
-                <ul>
-                    <li>Formalized the use of a tangent parametrization of the robot configuration space (TC-space) in robot manipulation, leveraging the recent advancements of the C-IRIS algorithm in motion planning.</li>
-                    <li>Proved the scalability of C-IRIS to robots with universal joints.</li>
-                    <li>Utilized the Drake Robotics Toolbox for implementation and visualization.</li>
-                    <li>Leveraged the mathematics of motion and manipulation planning, robot kinematics, algebraic rotations (SO(3) group), and optimization techniques.</li>
-                    <li>Achieved a 1st Class mark.</li>
-                    <li>Supervision: Dr Steve Tonneau.</li>
-                        <li>Continued in my MINF2 dissertation, which developed a manipulation planner over convex decompositions of the free configuration space.</li>
-                </ul>
-
-                <div class="button-row">
-                    <a class="button small ghost" href="https://github.com/julialopezgomez/MInf1---Dissertation" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.1 0 0 .67-.21 2.2.82a7.52 7.52 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.09.16 1.9.08 2.1.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg><span>GitHub</span></a>
-                    <a class="button small" href="files/MINF1.pdf" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 0h5.5L14 4.5V15a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1zm5 1.5V5h3.5L9 1.5zM4.5 8h7v1h-7V8zm0 2.5h7v1h-7v-1z"/></svg><span>Download Report</span></a>
                 </div>
             </details>
 
