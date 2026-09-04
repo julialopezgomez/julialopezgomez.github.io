@@ -465,6 +465,14 @@ details > h4 {
     margin-left: 1.6rem;
 }
 
+/* Treat links and downloads as a quiet resource footer rather than
+   letting buttons float against the lower edge of an expanded entry. */
+details > .button-row {
+    margin: 0.85rem 0 0.95rem 1.6rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid var(--divider);
+}
+
 details ul {
     margin: 0.1rem 0 0.85rem 1.6rem;
     padding-left: 1.05rem;

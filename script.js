@@ -52,10 +52,11 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // Muted neutrals with a hint of the accent blue
+    // Theme-specific contrast keeps the network legible without competing
+    // with the content cards, especially against the pale light background.
     const palette = theme === "dark"
-      ? { particle: "#8ba4ff", link: "#4a5570" }
-      : { particle: "#8e9bb5", link: "#aab3c4" };
+      ? { particle: "#9db1ff", link: "#6072a1", opacity: 0.72, linkOpacity: 0.5 }
+      : { particle: "#526a9a", link: "#687b9e", opacity: 0.78, linkOpacity: 0.54 };
 
     // Clean existing canvas before reinitializing.
     if (window.pJSDom && window.pJSDom.length > 0) {
@@ -84,26 +85,26 @@ document.addEventListener("DOMContentLoaded", () => {
           type: "circle"
         },
         opacity: {
-          value: 0.6,
-          random: true,
+          value: palette.opacity,
+          random: false,
           anim: {
             enable: false
           }
         },
         size: {
-          value: 3.2,
+          value: 5.2,
           random: true
         },
         line_linked: {
           enable: true,
-          distance: 145,
+          distance: 165,
           color: palette.link,
-          opacity: 0.4,
-          width: 1
+          opacity: palette.linkOpacity,
+          width: 1.2
         },
         move: {
           enable: true,
-          speed: 1,
+          speed: 1.25,
           direction: "none",
           random: false,
           straight: false,
@@ -127,13 +128,13 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         modes: {
           grab: {
-            distance: 160,
+            distance: 220,
             line_linked: {
-              opacity: 0.7
+              opacity: 0.95
             }
           },
           push: {
-            particles_nb: 4
+            particles_nb: 7
           }
         }
       },
@@ -144,21 +145,36 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* particles.js ships grab/repulse/bubble but no cursor attraction, so
-     steer particles toward the pointer by hand: each frame, particles
-     within RADIUS get a small nudge toward the cursor, with the speed
-     clamped so they drift rather than accelerate into it. */
+     steer particles toward the pointer by hand. Hover pulls the network
+     toward the pointer; pressing reverses the force for a playful burst. */
   let attractionRunning = false;
-  const pointer = { x: null, y: null };
+  const pointer = { x: null, y: null, pressed: false };
 
-  window.addEventListener("mousemove", (event) => {
+  window.addEventListener("pointermove", (event) => {
     pointer.x = event.clientX;
     pointer.y = event.clientY;
-  });
+    pointer.pressed = event.buttons > 0;
+  }, { passive: true });
 
-  window.addEventListener("mouseout", () => {
+  window.addEventListener("pointerdown", (event) => {
+    pointer.x = event.clientX;
+    pointer.y = event.clientY;
+    pointer.pressed = true;
+  }, { passive: true });
+
+  window.addEventListener("pointerup", () => {
+    pointer.pressed = false;
+  }, { passive: true });
+
+  window.addEventListener("pointercancel", resetPointer, { passive: true });
+  document.documentElement.addEventListener("pointerleave", resetPointer, { passive: true });
+  window.addEventListener("blur", resetPointer);
+
+  function resetPointer() {
     pointer.x = null;
     pointer.y = null;
-  });
+    pointer.pressed = false;
+  }
 
   function startCursorAttraction() {
     if (attractionRunning) {
@@ -166,9 +182,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     attractionRunning = true;
 
-    const RADIUS = 220;    // px: how close the cursor must be to pull
-    const PULL = 0.035;    // how hard it pulls per frame
-    const MAX_SPEED = 2.2; // keeps particles from slingshotting
+    const RADIUS = 300;          // px: responsive area around the pointer
+    const HOVER_PULL = 0.075;    // gentle attraction while exploring
+    const PRESS_REPEL = 0.24;    // stronger outward burst while pressing
+    const HOVER_MAX_SPEED = 3;
+    const PRESS_MAX_SPEED = 5.2;
 
     function step() {
       const instance = window.pJSDom && window.pJSDom[0];
@@ -185,15 +203,18 @@ document.addEventListener("DOMContentLoaded", () => {
           const distance = Math.sqrt(dx * dx + dy * dy);
 
           if (distance > 4 && distance < RADIUS * ratio) {
-            // Falls off with distance: nearer particles are pulled harder
-            const force = PULL * (1 - distance / (RADIUS * ratio));
+            // The force falls off with distance. Holding the pointer reverses
+            // it, so the same area can be gathered and scattered deliberately.
+            const strength = pointer.pressed ? -PRESS_REPEL : HOVER_PULL;
+            const force = strength * (1 - distance / (RADIUS * ratio));
             particle.vx += (dx / distance) * force;
             particle.vy += (dy / distance) * force;
 
             const speed = Math.sqrt(particle.vx * particle.vx + particle.vy * particle.vy);
-            if (speed > MAX_SPEED) {
-              particle.vx = (particle.vx / speed) * MAX_SPEED;
-              particle.vy = (particle.vy / speed) * MAX_SPEED;
+            const maxSpeed = pointer.pressed ? PRESS_MAX_SPEED : HOVER_MAX_SPEED;
+            if (speed > maxSpeed) {
+              particle.vx = (particle.vx / speed) * maxSpeed;
+              particle.vy = (particle.vy / speed) * maxSpeed;
             }
           }
         });
