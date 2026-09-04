@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,9 +12,9 @@
       (function () {
         try {
           var stored = localStorage.getItem("theme");
-          var theme = stored || "dark";
+          var theme = stored || "light";
           document.documentElement.setAttribute("data-theme", theme);
-        } catch (e) { /* dark is already set on the root element */ }
+        } catch (e) { /* light is already set on the root element */ }
       })();
     </script>
 </head>
@@ -32,7 +32,7 @@
             </div>
             <div class="nav-actions">
                 <a class="cv-link" href="files/JULIA%20LOPEZ%20GOMEZ_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
-                <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to light mode"><svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><line x1="12" y1="1.5" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22.5"/><line x1="4.2" y1="4.2" x2="6" y2="6"/><line x1="18" y1="18" x2="19.8" y2="19.8"/><line x1="1.5" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22.5" y2="12"/><line x1="4.2" y1="19.8" x2="6" y2="18"/><line x1="18" y1="6" x2="19.8" y2="4.2"/></svg><svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+                <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to dark mode"><svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><line x1="12" y1="1.5" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22.5"/><line x1="4.2" y1="4.2" x2="6" y2="6"/><line x1="18" y1="18" x2="19.8" y2="19.8"/><line x1="1.5" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22.5" y2="12"/><line x1="4.2" y1="19.8" x2="6" y2="18"/><line x1="18" y1="6" x2="19.8" y2="4.2"/></svg><svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
                 <a class="icon-link" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=J.Lopez-Gomez%40sms.ed.ac.uk" target="_blank" rel="noopener noreferrer" aria-label="Email Julia" title="Compose an email to Julia">
                     <svg viewBox="0 0 16 16" role="img" aria-hidden="true"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-.5a.5.5 0 0 0-.32.11L8 8.69l6.32-5.08A.5.5 0 0 0 14 3.5H2zm13 1.23-4.86 3.9L15 12.69V4.73zm-.8 8.27-5.19-4.16-.7.56a.5.5 0 0 1-.62 0l-.7-.56L1.8 13h12.4zm-13.4-.31 4.86-4.06L1 4.73v7.96z"/></svg>
                 </a>
@@ -47,6 +47,12 @@
     </header>
 
     <main>
+        <header class="page-heading">
+            <p class="eyebrow">Courses · Mentoring · Representation</p>
+            <h1>Teaching &amp; University Involvement</h1>
+            <p>Teaching support, student mentoring and representation, and selected contributions to the University of Edinburgh community.</p>
+        </header>
+
         <section id="teaching" class="section-card">
             <h2>Teaching</h2>
 
@@ -112,19 +118,13 @@
 
             <details>
                 <summary>
-                    <span class="entry-title">Academic Events &amp; Activities</span>
-                    <span class="entry-meta">Selected university and professional activities</span>
+                    <span class="entry-title">Selected Contributions &amp; Activities</span>
+                    <span class="entry-meta">Representation, project presentations, and competition outcomes</span>
                 </summary>
-                <ul>
-                    <li>November 2024: Attended Board of Studies meeting as student rep to contribute to course and curriculum proposals.</li>
-                    <li>October 2024: Attended TUM Dr. Majid Khadiv's talk on optimal control and learning for contact-rich robotics, University of Edinburgh.</li>
-                    <li>September 2024: Attended TUM Prof. Gordon Cheng's talk "Towards multi-intelligences: are we there yet?", University of Edinburgh.</li>
-                    <li>August 2024: Invited to and attended the Amazon Campus Summer Series Seminar.</li>
-                    <li>August 2024: Developed this portfolio website to showcase academic and professional achievements; utilized HTML, CSS, and JavaScript for a responsive and interactive user experience; implemented collapsible sections for organization; integrated particles.js for dynamic visual effect.</li>
-                    <li>February 2024: Invited to Airbus CubeSat Day to present our Payload project with Endeavour Rockets to other UK satellite student teams; our project included the 3-unit CubeSat payload, with an experiment to simulate the search of life in Exoplanets; engaged in discussions with industry professionals and other student teams.</li>
-                    <li>2022 and 2023: Participant in HackTheBurgh Hackathon.</li>
-                    <li>November 2022: Invited to J.P. Morgan's Women in Technology Event in Glasgow.</li>
-                    <li>November 2022: Participant in AdaHack Hackathon, 1st Prize Overall.</li>
+                <ul class="event-list">
+                    <li><time datetime="2024-11">November 2024</time><span>Attended Board of Studies meeting as student rep to contribute to course and curriculum proposals.</span></li>
+                    <li><time datetime="2024-02">February 2024</time><span>Invited to Airbus CubeSat Day to present our Payload project with Endeavour Rockets to other UK satellite student teams; our project included the 3-unit CubeSat payload, with an experiment to simulate the search of life in Exoplanets; engaged in discussions with industry professionals and other student teams.</span></li>
+                    <li><time datetime="2022-11">November 2022</time><span>Participant in AdaHack Hackathon, 1st Prize Overall.</span></li>
                 </ul>
             </details>
         </section>

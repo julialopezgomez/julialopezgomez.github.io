@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,9 +12,9 @@
       (function () {
         try {
           var stored = localStorage.getItem("theme");
-          var theme = stored || "dark";
+          var theme = stored || "light";
           document.documentElement.setAttribute("data-theme", theme);
-        } catch (e) { /* dark is already set on the root element */ }
+        } catch (e) { /* light is already set on the root element */ }
       })();
     </script>
 </head>
@@ -33,7 +33,7 @@
             </div>
             <div class="nav-actions">
                 <a class="cv-link" href="files/JULIA%20LOPEZ%20GOMEZ_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
-                <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to light mode"><svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><line x1="12" y1="1.5" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22.5"/><line x1="4.2" y1="4.2" x2="6" y2="6"/><line x1="18" y1="18" x2="19.8" y2="19.8"/><line x1="1.5" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22.5" y2="12"/><line x1="4.2" y1="19.8" x2="6" y2="18"/><line x1="18" y1="6" x2="19.8" y2="4.2"/></svg><svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+                <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to dark mode"><svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><line x1="12" y1="1.5" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22.5"/><line x1="4.2" y1="4.2" x2="6" y2="6"/><line x1="18" y1="18" x2="19.8" y2="19.8"/><line x1="1.5" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22.5" y2="12"/><line x1="4.2" y1="19.8" x2="6" y2="18"/><line x1="18" y1="6" x2="19.8" y2="4.2"/></svg><svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
                 <a class="icon-link" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=J.Lopez-Gomez%40sms.ed.ac.uk" target="_blank" rel="noopener noreferrer" aria-label="Email Julia" title="Compose an email to Julia">
                     <svg viewBox="0 0 16 16" role="img" aria-hidden="true"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-.5a.5.5 0 0 0-.32.11L8 8.69l6.32-5.08A.5.5 0 0 0 14 3.5H2zm13 1.23-4.86 3.9L15 12.69V4.73zm-.8 8.27-5.19-4.16-.7.56a.5.5 0 0 1-.62 0l-.7-.56L1.8 13h12.4zm-13.4-.31 4.86-4.06L1 4.73v7.96z"/></svg>
                 </a>
@@ -64,22 +64,33 @@
         <!-- Thesis / research, kept separate so the intro block stays compact -->
         <section id="research" class="section-card">
             <h2>Research</h2>
-            <p><strong>Thesis:</strong> Representations of Reachable Behaviour for Planning in Long-Horizon Robotics Tasks</p>
-            <p>I work on long-horizon robot motion and manipulation planning. A robot may already have controllers, policies, and skills that work well on their own, but it still has to work out when each one can be used and how to chain them together into a longer task. My thesis asks how to represent what each behaviour can actually reach, so that a planner can reuse and compose them.</p>
-            <p class="keywords"><strong>Research interests:</strong> long-horizon manipulation planning, reachability representations, reusing and composing controllers and learned skills, and optimisation-based planning.</p>
+            <div class="research-thesis-simple">
+                <span>Current thesis</span>
+                <p>Representations of Reachable Behaviour for Planning in Long-Horizon Robotics Tasks</p>
+            </div>
+            <p class="research-summary">I work on long-horizon robot motion and manipulation planning. A robot may already have controllers, policies, and skills that work well on their own, but it still has to work out when each one can be used and how to chain them together into a longer task. My thesis asks how to represent what each behaviour can actually reach, so that a planner can reuse and compose them.</p>
+            <div class="research-interests">
+                <span>Research interests</span>
+                <ul class="topic-list">
+                    <li>Long-horizon manipulation</li>
+                    <li>Reachability representations</li>
+                    <li>Controller &amp; skill composition</li>
+                    <li>Optimisation-based planning</li>
+                </ul>
+            </div>
         </section>
 
         <!-- News: kept short and current on the homepage -->
         <section class="section-card">
             <h2>News</h2>
             <ul class="news-list">
-                <li><span>7–11 September 2026</span> Selected to attend the 1st IEEE RAS Summer School: Decision-Making for Cognitive Robots in Germany.</li>
-                <li><span>September 2026</span> Started my second year of the PhD program, CDT-D2AIR.</li>
-                <li><span>13 August 2026</span> Presented "Manipulation Planning with Convex Decompositions of C-free and NLP-Sampling" at a School of Informatics IPAB workshop.</li>
-                <li><span>9–13 February 2026</span> Presented a poster and project pitch at the ROMANDIC Winter School in Kranjska Gora, Slovenia, with workshops and mini-projects on robot learning and manipulation.</li>
-                <li><span>September 2025</span> Started my PhD in Robotics and AI within CDT-D2AIR, Edinburgh Centre for Robotics.</li>
-                <li><span>11 July 2025</span> Graduated from the University of Edinburgh with an Integrated Master of Informatics, First-Class Honours.</li>
-                <li><span>April–May 2025</span> Completed the MCTS for Robotics Manipulation voluntary project with LAAS-CNRS and NYU.</li>
+                <li><time datetime="2026-09-07">7–11 September 2026</time><div class="news-content">Selected to attend the <a href="https://r8.ieee.org/germany-ras/2026/05/11/ieee-ras-german-summer-schools-2026/" target="_blank" rel="noopener noreferrer">1st IEEE RAS Summer School: Decision-Making for Cognitive Robots</a> in Germany.</div></li>
+                <li><time datetime="2026-09">September 2026</time><div class="news-content">Started my second year of the PhD program, CDT-D2AIR.</div></li>
+                <li><time datetime="2026-08-13">13 August 2026</time><div class="news-content">Presented "Manipulation Planning with Convex Decompositions of C-free and NLP-Sampling" at a School of Informatics IPAB workshop.</div></li>
+                <li><time datetime="2026-02-09">9–13 February 2026</time><div class="news-content">Presented a poster and project pitch at the <a href="https://project-romandic.eu/winter-school-2026/" target="_blank" rel="noopener noreferrer">ROMANDIC Winter School</a> in Kranjska Gora, Slovenia, with workshops and mini-projects on robot learning and manipulation.</div></li>
+                <li><time datetime="2025-09">September 2025</time><div class="news-content">Started my PhD in Robotics and AI within CDT-D2AIR, Edinburgh Centre for Robotics.</div></li>
+                <li><time datetime="2025-07-11">11 July 2025</time><div class="news-content">Graduated from the University of Edinburgh with an Integrated Master of Informatics, First-Class Honours.</div></li>
+                <li><time datetime="2025-04">April–May 2025</time><div class="news-content">Completed the MCTS for Robotics Manipulation voluntary project with LAAS-CNRS and NYU.</div></li>
             </ul>
         </section>
     </main>

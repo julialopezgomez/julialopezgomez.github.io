@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Education / Experience | Julia López Gómez</title>
-    <meta name="description" content="Education, research projects, and work experience of Julia López Gómez.">
+    <title>Education, Experience &amp; Skills | Julia López Gómez</title>
+    <meta name="description" content="Education, doctoral training, work experience, technical projects, skills, and awards of Julia López Gómez.">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="files/icon.png">
     <script>
@@ -12,9 +12,9 @@
       (function () {
         try {
           var stored = localStorage.getItem("theme");
-          var theme = stored || "dark";
+          var theme = stored || "light";
           document.documentElement.setAttribute("data-theme", theme);
-        } catch (e) { /* dark is already set on the root element */ }
+        } catch (e) { /* light is already set on the root element */ }
       })();
     </script>
 </head>
@@ -32,7 +32,7 @@
             </div>
             <div class="nav-actions">
                 <a class="cv-link" href="files/JULIA%20LOPEZ%20GOMEZ_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
-                <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to light mode"><svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><line x1="12" y1="1.5" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22.5"/><line x1="4.2" y1="4.2" x2="6" y2="6"/><line x1="18" y1="18" x2="19.8" y2="19.8"/><line x1="1.5" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22.5" y2="12"/><line x1="4.2" y1="19.8" x2="6" y2="18"/><line x1="18" y1="6" x2="19.8" y2="4.2"/></svg><svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+                <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to dark mode"><svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><line x1="12" y1="1.5" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22.5"/><line x1="4.2" y1="4.2" x2="6" y2="6"/><line x1="18" y1="18" x2="19.8" y2="19.8"/><line x1="1.5" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22.5" y2="12"/><line x1="4.2" y1="19.8" x2="6" y2="18"/><line x1="18" y1="6" x2="19.8" y2="4.2"/></svg><svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
                 <a class="icon-link" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=J.Lopez-Gomez%40sms.ed.ac.uk" target="_blank" rel="noopener noreferrer" aria-label="Email Julia" title="Compose an email to Julia">
                     <svg viewBox="0 0 16 16" role="img" aria-hidden="true"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-.5a.5.5 0 0 0-.32.11L8 8.69l6.32-5.08A.5.5 0 0 0 14 3.5H2zm13 1.23-4.86 3.9L15 12.69V4.73zm-.8 8.27-5.19-4.16-.7.56a.5.5 0 0 1-.62 0l-.7-.56L1.8 13h12.4zm-13.4-.31 4.86-4.06L1 4.73v7.96z"/></svg>
                 </a>
@@ -47,33 +47,50 @@
     </header>
 
     <main>
-        <section id="experience" class="section-card">
-            <h2>Education &amp; Experience</h2>
+        <header class="page-heading">
+            <p class="eyebrow">Degrees · Training · Experience · Skills</p>
+            <h1>Education, Experience &amp; Skills</h1>
+            <p>Degrees and doctoral training, research schools, technical experience, selected projects, skills, and awards.</p>
+            <nav aria-label="On this page">
+                <ul class="page-jump-nav">
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#schools">Schools &amp; Training</a></li>
+                    <li><a href="#work">Work Experience</a></li>
+                    <li><a href="#earlier">Earlier Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#awards">Awards</a></li>
+                </ul>
+            </nav>
+        </header>
 
-            <!-- Anchor links, since this is the longest page -->
-            <ul class="page-jump-nav">
-                <li><a href="#education">Education</a></li>
-                <li><a href="#schools">Schools &amp; Training</a></li>
-                <li><a href="#work">Work Experience</a></li>
-                <li><a href="#earlier">Earlier Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#awards">Awards</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-            </ul>
-
-            <h3 id="education">Education</h3>
+        <section id="education" class="section-card">
+            <h2>Education</h2>
             <details>
                 <summary>
                     <span class="entry-title">PhD in Robotics and AI</span>
                     <span class="entry-meta">September 2025 - 2029 (expected) · CDT-D2AIR, University of Edinburgh &amp; Heriot-Watt University</span>
                 </summary>
-                <ul>
-                    <li><strong>Thesis:</strong> Representations of Reachable Behaviour for Planning in Long-Horizon Robotics Tasks.</li>
-                    <li>Supervisor: Dr Steve Tonneau.</li>
-                    <li>Based at the Edinburgh Centre for Robotics, within the Centre for Doctoral Training in Deployable and Dependable Artificial Intelligence Robotics (CDT-D2AIR).</li>
-                    <li>Affiliated with IPAB, School of Informatics, University of Edinburgh; additionally a member of the MARBLE group.</li>
-                    <li>Funded by an EPSRC (UKRI) CDT studentship, covering fees and a UKRI-rate stipend.</li>
-                </ul>
+                <dl class="education-facts">
+                    <div>
+                        <dt>Thesis</dt>
+                        <dd><strong>Representations of Reachable Behaviour for Planning in Long-Horizon Robotics Tasks</strong></dd>
+                    </div>
+                    <div>
+                        <dt>Supervisor</dt>
+                        <dd><a href="https://www.edinburgh-robotics.org/academics/steve-tonneau" target="_blank" rel="noopener noreferrer">Dr Steve Tonneau</a></dd>
+                    </div>
+                    <div>
+                        <dt>Programme</dt>
+                        <dd>
+                            <strong><a href="https://www.cdt-d2air.uk/" target="_blank" rel="noopener noreferrer">UKRI AI Centre for Doctoral Training in Dependable and Deployable Artificial Intelligence for Robotics (CDT-D2AIR)</a></strong>
+                            <span>Jointly delivered by the <a href="https://www.ed.ac.uk/" target="_blank" rel="noopener noreferrer">University of Edinburgh</a> and <a href="https://www.hw.ac.uk/" target="_blank" rel="noopener noreferrer">Heriot-Watt University</a></span>
+                        </dd>
+                    </div>
+                    <div>
+                        <dt>Affiliations</dt>
+                        <dd><a href="https://informatics.ed.ac.uk/ipab" target="_blank" rel="noopener noreferrer">IPAB, School of Informatics, University of Edinburgh</a> · MARBLE group</dd>
+                    </div>
+                </dl>
             </details>
 
             <details>
@@ -81,18 +98,30 @@
                     <span class="entry-title">Integrated Master of Informatics (MInf)</span>
                     <span class="entry-meta">September 2020 - July 2025 · University of Edinburgh</span>
                 </summary>
-                <ul>
-                    <li>First-Class Honours; graduated 11 July 2025.</li>
-                    <li><strong>MInf Project Part 2 (2024 - 2025):</strong> Manipulation Planning in Convex Decompositions of the Free Configuration Space. Supervised by Dr Steve Tonneau.</li>
-                    <li><strong>MInf Project Part 1 (2023 - 2024):</strong> Manipulation Planning with a Robotic Arm: A Tangent Configuration Space Approach. Supervised by Dr Steve Tonneau; awarded a 1st Class mark.</li>
-                    <li>Relevant coursework: Machine Learning Practical, Computer Vision, Principles and Design of IoT Systems, Mobile Robotics, System Design Project, and Informatics Large Practical.</li>
-                </ul>
+                <dl class="education-facts">
+                    <div>
+                        <dt>Degree result</dt>
+                        <dd><strong>First-Class Honours</strong><span><a href="https://study.ed.ac.uk/programmes/undergraduate/430-informatics-5-year-undergraduate-masters-programme" target="_blank" rel="noopener noreferrer">Official MInf programme</a> · graduated 11 July 2025</span></dd>
+                    </div>
+                    <div>
+                        <dt>Project Part 2</dt>
+                        <dd><strong>Manipulation Planning in Convex Decompositions of the Free Configuration Space</strong><span>2024–2025 · supervised by Dr Steve Tonneau · First-Class mark</span></dd>
+                    </div>
+                    <div>
+                        <dt>Project Part 1</dt>
+                        <dd><strong>Manipulation Planning with a Robotic Arm: A Tangent Configuration Space Approach</strong><span>2023–2024 · supervised by Dr Steve Tonneau · First-Class mark</span></dd>
+                    </div>
+                    <div>
+                        <dt>Coursework</dt>
+                        <dd>Machine Learning Practical, Computer Vision, Principles and Design of IoT Systems, Mobile Robotics, System Design Project, and Informatics Large Practical</dd>
+                    </div>
+                </dl>
             </details>
         </section>
 
         <!-- Doctoral training: summer / winter schools and similar -->
         <section class="section-card">
-            <h3 id="schools">Schools &amp; Research Training</h3>
+            <h2 id="schools">Schools &amp; Research Training</h2>
 
             <details>
                 <summary>
@@ -103,6 +132,9 @@
                     <li>Selected to attend this IEEE Robotics and Automation Society summer school.</li>
                     <li>The programme covers learned planning models, robot learning, skill adaptation, and constrained sampling for cognitive robots.</li>
                 </ul>
+                <div class="button-row">
+                    <a class="button small ghost" href="https://r8.ieee.org/germany-ras/2026/05/11/ieee-ras-german-summer-schools-2026/" target="_blank" rel="noopener noreferrer">Official School Page</a>
+                </div>
             </details>
 
             <details>
@@ -112,17 +144,20 @@
                 </summary>
                 <ul>
                     <li>Presented a poster and a short project pitch on my PhD research.</li>
-                    <li>Took part in workshops and mini-projects on learning for manipulation, and discussed my work with researchers including Prof. Tamim Asfour.</li>
+                    <li>Took part in workshops and mini-projects on learning for manipulation.</li>
                     <li>Week-long school on robot handling of deformable objects, with a focus on textiles, covering perception, simulation, control, benchmarking, and real-world applications.</li>
                     <li>Organised within the ROMANDIC project, an EU Horizon Europe Network of Excellence in Robot Manipulation of Deformables.</li>
                 </ul>
+                <div class="button-row">
+                    <a class="button small ghost" href="https://project-romandic.eu/winter-school-2026/" target="_blank" rel="noopener noreferrer">Official School Page</a>
+                </div>
             </details>
         </section>
 
         <!-- Paid / formal roles only; earlier student projects live below -->
         <section class="section-card">
-            <h3 id="work">Work Experience</h3>
-<details>
+            <h2 id="work">Work Experience</h2>
+            <details>
                 <summary>
                     <span class="entry-title">Makerspace Student Technician</span>
                     <span class="entry-meta">Spring 2024 - 2025 · School of Informatics, UoE</span>
@@ -132,22 +167,6 @@
                     <li>Delivered workshops on Raspberry Pi and Arduino to Computer Science students.</li>
                     <li>Maintained 3D printers, prepared electronic kits, and supported student projects.</li>
                     <li>Received The Edinburgh Award for my contributions as a Makerspace Student Technician.</li>
-                </ul>
-            </details>
-
-            <details>
-                <summary>
-                    <span class="entry-title">Payload Software and Electrical Lead</span>
-                    <span class="entry-meta">Sep. 2022 - Sep. 2024 · Endeavour Rockets</span>
-                </summary>
-                <ul>
-                    <li>Developed a CanSat and a 3-unit CubeSat as payloads for a student-assembled rocket.</li>
-                    <li>Learned and designed the circuit schematics and PCBs of the payload with Altium Designer.</li>
-                    <li>2nd position in Combined 3km Launch Vehicle and CanSat category at Mach-23 competition.</li>
-                    <li>Key skills: Python, Raspberry Pi, embedded programming, parafoil design, etc.</li>
-                    <li>From August 2023: Co-leading the team, mentoring 1st and 3rd Year students.</li>
-                    <li>Research Experiments: Microbial Air Sampler, Simulated Life Search, Albedo Detection, etc.</li>
-                    <li>Invited to Airbus CubeSat day to present our project to other UK satellite student teams.</li>
                 </ul>
             </details>
 
@@ -165,17 +184,37 @@
         </section>
 
         <section class="section-card">
-            <h3 id="earlier">Earlier Projects &amp; Competitions</h3>
-            <details>
+            <h2 id="earlier">Earlier Projects &amp; Competitions</h2>
+            <div class="project-highlight-grid">
+                <article>
+                    <span>2022–2024 · Endeavour Rockets</span>
+                    <h4>Payload Software &amp; Electrical Lead</h4>
+                    <p>Developed software, embedded systems, and PCBs for CanSat and 3U CubeSat payloads; later co-led and mentored the team, achieved second place at Mach-23, and presented the project at Airbus CubeSat Day.</p>
+                </article>
+                <article>
+                    <span>Spring 2023 · UoE</span>
+                    <h4>Electronic Laundry Folder</h4>
+                    <p>Designed and manufactured an assistive laundry-folding robot in a team of eight using Raspberry Pi, Arduino, Python, Fusion 360, and 3D printing; presented the result to industry professionals.</p>
+                </article>
+                <article>
+                    <span>Fall 2022 · UoE</span>
+                    <h4>PizzaDronz</h4>
+                    <p>Built a Java drone-delivery simulation with RESTful data retrieval and Weighted A* route planning under no-fly-zone and battery constraints.</p>
+                </article>
+                <article>
+                    <span>2018–2020 · ESA competition</span>
+                    <h4>CanSat</h4>
+                    <p>Built a soda-can-sized satellite and a Yagi antenna for 868 MHz LoRa communications; reached the Spanish national final twice.</p>
+                </article>
+            </div>
+
+            <details class="archive-details">
                 <summary>
-                    <span class="entry-title">Earlier projects and competitions</span>
-                    <span class="entry-meta">Pre-university and undergraduate, kept for the full record</span>
+                    <span class="entry-title">Additional earlier activities</span>
+                    <span class="entry-meta">Pre-university programmes and competitions</span>
                 </summary>
                 <ul>
-<li><strong>Spring 2023 · Electronic Laundry Folder (System Design Project, UoE):</strong> Designed and manufactured an assistive laundry-folding robot; used Raspberry Pi, Arduino, and Python; utilized CAD software (Fusion360) and 3D printing for prototyping; collaborated in a team of eight and presented the results to industry professionals.</li>
-                    <li><strong>Fall 2022 · PizzaDronz: Drone-Based Pizza Delivery System (Informatics Large Practical, UoE):</strong> Designed and implemented a drone-based delivery system simulating the entire process of delivering pizzas using a RESTful server for data retrieval; implemented a comprehensive software architecture consisting of 17 classes, including key components like the App, Drone, and SearchAlgorithm classes; developed a drone control algorithm utilizing the Weighted A* search algorithm to optimize delivery routes while adhering to constraints like no-fly zones and battery limitations; integrated RESTful API for dynamic data retrieval, including restaurant locations, no-fly zones, and delivery orders; technologies used: Java, JSON, GeoJSON, Maven.</li>
                     <li><strong>Summer 2022 · Student-Led Individually-Created Course (UoE):</strong> Opportunity to create your own extra 20-credit course; focused on learning C++, SQL, and Fusion 360; reported progress, challenges, and solutions in a reflective work style.</li>
-                    <li><strong>2018 - 2020 · CanSat Competition (European Space Agency):</strong> Assembled a micro-satellite of the size of a soda can for the ESA CanSat Competition; manufactured Yagi Antenna for telecommunications with a LoRa system at 868MHz RF; achieved a national finalist position twice.</li>
                     <li><strong>February 2020 · Mathematic Olympiads and Barcelona Tech Math Contest:</strong> Finalist of the Spanish Mathematic Olympiads and participated in the Barcelona Tech Math Contest; competed against finalists from across the country for selection in the European Female Mathematics Olympiad.</li>
                     <li><strong>Spring 2020 · Canarias Masterclass:</strong> Participated in a mentoring program focused on data analysis; gained insights from a Data Analyst project manager at a local business in Tenerife.</li>
                     <li><strong>November 2019 · Oshwden Coruña:</strong> Presented a project of a network of meteorological stations at a technological congress in Galicia; detected levels of polluting gases in different locations across Spain; worked with my high-school robotics team.</li>
@@ -183,7 +222,6 @@
                     <li><strong>Summer 2019 · National Summer Scientific Campus:</strong> Selected at a national level to participate in this campus; worked with the robot Pepper and delved into Virtual Reality game development.</li>
                     <li><strong>2017 - 2019 · Canary Islands Scientific Campus and Scientific Challenges:</strong> Participated in Scientific Summer Programs in 2017 and 2019; developed projects in Mathematics, Physics, and Chemistry; won the Scientific Challenges Campus in 2019 with a group of three; developed an outreach project to identify endemic species in the Canary Islands and their properties; built an app using the MIT App Inventor; presented the project to University of La Laguna professors and students.</li>
                     <li><strong>2017 - 2019 · Mathematical Kangaroo:</strong> Participated in the Mathematical Kangaroo, an international mathematical competition for school students; ranked in the top 5% of participants three consecutive years at a national level, amongst 3K+ students.</li>
-                    <li><strong>2018 - 2019 · Bionic Arm Project:</strong> Worked for a year on building a bionic arm for a colleague in high school; introduced to 3D printing and CAD design.</li>
                     <li><strong>2016 - 2018 · EsTalMat Canarias:</strong> Selected for the EsTalMat (Estímulo del Talento Matemático) Canarias program, a national initiative aimed at nurturing young mathematical talent; EsTalMat selects 15 regional students annually to develop their skills in advanced mathematics and logic; engaged in intensive mathematical training beyond the standard curriculum; collaborated with peers on complex mathematical challenges, fostering teamwork and critical thinking abilities.</li>
                 </ul>
             </details>
@@ -193,24 +231,24 @@
             <h2 id="skills">Skills</h2>
             <dl class="skills-list">
                 <div>
-                    <dt>Programming Languages</dt>
-                    <dd>Python (PyTorch, SkLearn), Java (Maven, Spring Boot), C/C++ (Memory Management, Linux, Embedded Programming), Haskell, SQL.</dd>
+                    <dt>Robotics &amp; Planning</dt>
+                    <dd>Long-horizon manipulation planning, motion planning, robot kinematics, collision checking, reachability representations, and Graphs of Convex Sets.</dd>
                 </div>
                 <div>
-                    <dt>Robotics &amp; Machine Learning</dt>
-                    <dd>Deep Neural Networks, Convolutional Neural Networks, Motion and Manipulation Planning, Robot Kinematics, Computer Vision, Visual Odometry.</dd>
+                    <dt>Optimisation &amp; Mathematics</dt>
+                    <dd>Convex and nonlinear optimisation, numerical linear algebra, multivariable calculus, differential equations, and nonlinear sampling.</dd>
                 </div>
                 <div>
-                    <dt>Tools &amp; Software</dt>
-                    <dd>Altium Designer (PCB Design), Autodesk Fusion 360 (CAD), Git, JSON, Matplotlib, NumPy, Pandas, OpenCV.</dd>
+                    <dt>Machine Learning &amp; Vision</dt>
+                    <dd>PyTorch, deep neural networks, reinforcement learning, computer vision, image segmentation, and visual odometry.</dd>
                 </div>
                 <div>
-                    <dt>Mathematics</dt>
-                    <dd>Linear and Non-linear Optimization, Multivariable Calculus and Differential Equations, Numerical Linear Algebra.</dd>
+                    <dt>Programming</dt>
+                    <dd>Python, C/C++, Java, Haskell, and SQL.</dd>
                 </div>
                 <div>
-                    <dt>Practical</dt>
-                    <dd>Raspberry Pi, Arduino, 3D Printing, Laser Cutting, Soldering.</dd>
+                    <dt>Research Tools</dt>
+                    <dd>Drake, Linux, Git, NumPy, Pandas, Matplotlib, and OpenCV.</dd>
                 </div>
             </dl>
         </section>
@@ -249,35 +287,6 @@
             </ol>
         </section>
 
-        <section class="section-card">
-            <h2 id="certifications">Certifications</h2>
-            <ul class="certificate-list">
-                <li>
-                    <span class="certificate-name">Public Speaking for Non-Native English Speakers</span>
-                    <span class="certificate-meta">LinkedIn Learning · Mar 2023</span>
-                </li>
-                <li>
-                    <span class="certificate-name">Electronics Foundations: Fundamentals</span>
-                    <span class="certificate-meta">LinkedIn Learning · Jan 2023</span>
-                </li>
-                <li>
-                    <span class="certificate-name">Memorization and Rehearsal Tips for Public Speaking</span>
-                    <span class="certificate-meta">LinkedIn Learning · Jan 2023</span>
-                </li>
-                <li>
-                    <span class="certificate-name">Beginning C++ Programming – From Beginner to Beyond</span>
-                    <span class="certificate-meta">Udemy · Aug 2022</span>
-                </li>
-                <li>
-                    <span class="certificate-name">Fusion 360 Beginners Course</span>
-                    <span class="certificate-meta">Udemy · Jul 2022</span>
-                </li>
-                <li>
-                    <span class="certificate-name">The Complete SQL Bootcamp 2022: Go from Zero to Hero</span>
-                    <span class="certificate-meta">Udemy · Jul 2022</span>
-                </li>
-            </ul>
-        </section>
     </main>
 
     <!-- Footer: inline icon + link, matching the original site's contact row -->

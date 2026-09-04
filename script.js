@@ -7,9 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
   try {
     storedTheme = localStorage.getItem("theme");
   } catch (error) {
-    // Storage can be unavailable in privacy modes; the HTML still defaults dark.
+    // Storage can be unavailable in privacy modes; the HTML still defaults light.
   }
-  const initialTheme = storedTheme || "dark";
+  const initialTheme = storedTheme || "light";
+  let attractionRunning = false;
+  const pointer = { x: null, y: null, pressed: false };
 
   applyTheme(initialTheme);
 
@@ -55,8 +57,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Theme-specific contrast keeps the network legible without competing
     // with the content cards, especially against the pale light background.
     const palette = theme === "dark"
-      ? { particle: "#9db1ff", link: "#6072a1", opacity: 0.72, linkOpacity: 0.5 }
-      : { particle: "#526a9a", link: "#687b9e", opacity: 0.78, linkOpacity: 0.54 };
+      ? { particle: "#9db1ff", link: "#6072a1", opacity: 0.5, linkOpacity: 0.3 }
+      : { particle: "#526a9a", link: "#687b9e", opacity: 0.5, linkOpacity: 0.28 };
 
     // Clean existing canvas before reinitializing.
     if (window.pJSDom && window.pJSDom.length > 0) {
@@ -72,10 +74,10 @@ document.addEventListener("DOMContentLoaded", () => {
     particlesJS("particles-js", {
       particles: {
         number: {
-          value: 190,
+          value: 120,
           density: {
             enable: true,
-            value_area: 1000
+            value_area: 1100
           }
         },
         color: {
@@ -92,19 +94,19 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         },
         size: {
-          value: 5.2,
+          value: 3.8,
           random: true
         },
         line_linked: {
           enable: true,
-          distance: 165,
+          distance: 150,
           color: palette.link,
           opacity: palette.linkOpacity,
-          width: 1.2
+          width: 1
         },
         move: {
           enable: true,
-          speed: 1.25,
+          speed: 0.75,
           direction: "none",
           random: false,
           straight: false,
@@ -128,13 +130,13 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         modes: {
           grab: {
-            distance: 220,
+            distance: 185,
             line_linked: {
-              opacity: 0.95
+              opacity: 0.68
             }
           },
           push: {
-            particles_nb: 7
+            particles_nb: 4
           }
         }
       },
@@ -147,9 +149,6 @@ document.addEventListener("DOMContentLoaded", () => {
   /* particles.js ships grab/repulse/bubble but no cursor attraction, so
      steer particles toward the pointer by hand. Hover pulls the network
      toward the pointer; pressing reverses the force for a playful burst. */
-  let attractionRunning = false;
-  const pointer = { x: null, y: null, pressed: false };
-
   window.addEventListener("pointermove", (event) => {
     pointer.x = event.clientX;
     pointer.y = event.clientY;
@@ -182,11 +181,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     attractionRunning = true;
 
-    const RADIUS = 300;          // px: responsive area around the pointer
-    const HOVER_PULL = 0.075;    // gentle attraction while exploring
-    const PRESS_REPEL = 0.24;    // stronger outward burst while pressing
-    const HOVER_MAX_SPEED = 3;
-    const PRESS_MAX_SPEED = 5.2;
+    const RADIUS = 230;          // px: responsive area around the pointer
+    const HOVER_PULL = 0.04;     // subtle attraction while exploring
+    const PRESS_REPEL = 0.14;    // outward burst while pressing
+    const HOVER_MAX_SPEED = 2.2;
+    const PRESS_MAX_SPEED = 3.8;
 
     function step() {
       const instance = window.pJSDom && window.pJSDom[0];
