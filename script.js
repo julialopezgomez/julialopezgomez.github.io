@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
       acceptNode(node) {
         const parent = node.parentElement;
-        if (!node.nodeValue.trim() || !parent || parent.closest("script, style, svg")) {
+        if (!node.nodeValue.trim() || !parent || parent.closest("script, style, svg, [data-no-translate]")) {
           return NodeFilter.FILTER_REJECT;
         }
         return NodeFilter.FILTER_ACCEPT;

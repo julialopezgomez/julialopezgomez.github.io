@@ -4,6 +4,10 @@ Auto-generated from the live HTML. This is everything the site says today.
 
 The interface and all page content are available in English and Spanish through the persistent EN/ES navigation toggle. English remains the source language represented below.
 
+When Spanish is selected, a brief notice explains that the translation was generated automatically and may contain inaccuracies.
+
+Site-wide footer: Last updated 4 September 2026.
+
 ## About (homepage)  (`index.html`)
 
 PhD Student · Robotics & AI

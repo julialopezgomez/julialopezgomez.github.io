@@ -23,6 +23,8 @@ window.siteTranslations = {
     "Download Slides": "Descargar diapositivas",
     "Download Poster": "Descargar póster",
     "Official School Page": "Página oficial de la escuela",
+    "Last updated:": "Última actualización:",
+    "4 September 2026": "4 de septiembre de 2026",
     "Portrait of Julia López Gómez": "Retrato de Julia López Gómez",
     "University of Edinburgh": "Universidad de Edimburgo",
     "Heriot-Watt University": "Universidad Heriot-Watt",
