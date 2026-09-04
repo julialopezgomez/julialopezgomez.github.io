@@ -2,6 +2,8 @@
 
 Auto-generated from the live HTML. This is everything the site says today.
 
+The interface and all page content are available in English and Spanish through the persistent EN/ES navigation toggle. English remains the source language represented below.
+
 ## About (homepage)  (`index.html`)
 
 PhD Student · Robotics & AI

@@ -1,19 +1,30 @@
-// Theme + particles setup for a simple academic layout.
+// Language, theme, and particles setup for the academic site.
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.documentElement;
   const toggle = document.getElementById("themeToggle");
+  const languageButtons = [...document.querySelectorAll("[data-language]")];
+  const spanishTranslations = (window.siteTranslations && window.siteTranslations.es) || {};
+  const englishTitle = document.title;
+  const descriptionMeta = document.querySelector('meta[name="description"]');
+  const englishDescription = descriptionMeta ? descriptionMeta.content : "";
+  const textRecords = collectTextRecords();
+  const attributeRecords = collectAttributeRecords();
 
   let storedTheme = null;
+  let storedLanguage = null;
   try {
     storedTheme = localStorage.getItem("theme");
+    storedLanguage = localStorage.getItem("language");
   } catch (error) {
-    // Storage can be unavailable in privacy modes; the HTML still defaults light.
+    // Storage can be unavailable in privacy modes; HTML still defaults to light and English.
   }
   const initialTheme = storedTheme || "light";
+  let currentLanguage = storedLanguage === "es" ? "es" : "en";
   let attractionRunning = false;
   const pointer = { x: null, y: null, pressed: false };
 
   applyTheme(initialTheme);
+  applyLanguage(currentLanguage);
 
   if (toggle) {
     toggle.addEventListener("click", () => {
@@ -27,18 +38,104 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  languageButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const language = button.dataset.language;
+      if (language !== "en" && language !== "es") {
+        return;
+      }
+
+      applyLanguage(language);
+      try {
+        localStorage.setItem("language", language);
+      } catch (error) {
+        // The language switch still works for the current page without storage.
+      }
+    });
+  });
+
+  function collectTextRecords() {
+    const records = [];
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+      acceptNode(node) {
+        const parent = node.parentElement;
+        if (!node.nodeValue.trim() || !parent || parent.closest("script, style, svg")) {
+          return NodeFilter.FILTER_REJECT;
+        }
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+
+    while (walker.nextNode()) {
+      records.push({ node: walker.currentNode, english: walker.currentNode.nodeValue });
+    }
+    return records;
+  }
+
+  function collectAttributeRecords() {
+    const records = [];
+    document.querySelectorAll("[aria-label], [title], [alt]").forEach((element) => {
+      ["aria-label", "title", "alt"].forEach((attribute) => {
+        if (element.hasAttribute(attribute) && !(element === toggle && attribute === "aria-label")) {
+          records.push({ element, attribute, english: element.getAttribute(attribute) });
+        }
+      });
+    });
+    return records;
+  }
+
+  function translatePhrase(english, language = currentLanguage) {
+    return language === "es" && spanishTranslations[english]
+      ? spanishTranslations[english]
+      : english;
+  }
+
+  function translateText(english, language) {
+    const content = english.trim();
+    if (!content) {
+      return english;
+    }
+    const leadingWhitespace = english.match(/^\s*/)[0];
+    const trailingWhitespace = english.match(/\s*$/)[0];
+    return `${leadingWhitespace}${translatePhrase(content, language)}${trailingWhitespace}`;
+  }
+
+  function applyLanguage(language) {
+    currentLanguage = language;
+    root.lang = language;
+    root.dataset.language = language;
+
+    textRecords.forEach(({ node, english }) => {
+      node.nodeValue = translateText(english, language);
+    });
+    attributeRecords.forEach(({ element, attribute, english }) => {
+      element.setAttribute(attribute, translatePhrase(english, language));
+    });
+
+    document.title = translatePhrase(englishTitle, language);
+    if (descriptionMeta) {
+      descriptionMeta.content = translatePhrase(englishDescription, language);
+    }
+
+    languageButtons.forEach((button) => {
+      button.setAttribute("aria-pressed", String(button.dataset.language === language));
+    });
+    updateThemeToggleLabel(root.dataset.theme);
+  }
+
+  function updateThemeToggleLabel(theme) {
+    if (!toggle) {
+      return;
+    }
+    const englishLabel = theme === "dark" ? "Switch to light mode" : "Switch to dark mode";
+    toggle.setAttribute("aria-label", translatePhrase(englishLabel));
+  }
+
   function applyTheme(theme) {
     root.dataset.theme = theme;
 
-    if (toggle) {
-      // NB: only the label changes here — the sun/moon SVGs live in the
-      // markup and are swapped by CSS. Never overwrite the button's
-      // content, or the icons get destroyed on the first toggle.
-      toggle.setAttribute(
-        "aria-label",
-        theme === "dark" ? "Switch to light mode" : "Switch to dark mode"
-      );
-    }
+    // Only the label changes here; CSS swaps the existing sun/moon icons.
+    updateThemeToggleLabel(theme);
 
     // Particles are decorative: a failure here must never stop the
     // theme itself from switching.
