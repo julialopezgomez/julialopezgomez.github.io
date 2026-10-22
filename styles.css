@@ -559,7 +559,12 @@ a { color: var(--accent); }
     font-size: 0.78rem;
     font-weight: 650;
     letter-spacing: 0.025em;
-    white-space: nowrap;
+    text-wrap: balance;
+}
+
+/* Date ranges break after the dash, not inside a date */
+.news-list time span {
+    display: inline-block;
 }
 
 .news-content {
