@@ -6,7 +6,7 @@ The interface and all page content are available in English and Spanish through 
 
 When Spanish is selected, a brief notice explains that the translation was generated automatically and may contain inaccuracies.
 
-Site-wide footer: Last updated 4 September 2026.
+Site-wide footer: Last updated 22 October 2026.
 
 ## About (homepage)  (`index.html`)
 
@@ -30,8 +30,9 @@ Research interests:
 
 ### News
 
-- 7–11 September 2026 Selected to attend the [1st IEEE RAS Summer School: Decision-Making for Cognitive Robots](https://r8.ieee.org/germany-ras/2026/05/11/ieee-ras-german-summer-schools-2026/) in Germany.
-- September 2026 Started my second year of the PhD program, CDT-D2AIR.
+- 29 October – 1 November 2026 Taking part in the [Rock Climbing Robots](https://rock-climbing-robots.github.io/) hackathon in Bordeaux, France, in a team of six from CDT-D2AIR and LAAS-CNRS.
+- 21 September 2026 Presented my Year-1 annual review and progressed to the second year of my PhD at CDT-D2AIR.
+- 7–11 September 2026 Attended the [1st IEEE RAS Summer School: Decision-Making for Cognitive Robots](https://r8.ieee.org/germany-ras/2026/05/11/ieee-ras-german-summer-schools-2026/) in Germany, where I pitched my research on reachability-based motion and manipulation planning.
 - 13 August 2026 Presented "Manipulation Planning with Convex Decompositions of C-free and NLP-Sampling" at a School of Informatics IPAB workshop.
 - 9–13 February 2026 Presented a poster and project pitch at the [ROMANDIC Winter School](https://project-romandic.eu/winter-school-2026/) in Kranjska Gora, Slovenia, with workshops and mini-projects on robot learning and manipulation.
 - September 2025 Started my Robotics and AI PhD within CDT-D2AIR, Edinburgh Centre for Robotics.
@@ -140,9 +141,18 @@ Degrees and doctoral training, research schools, technical experience, selected 
 
 #### Schools & Research Training
 
-- **1st IEEE RAS Summer School: Decision-Making for Cognitive Robots** — 7–11 September 2026 · Germany · Upcoming
-  - Selected to attend this IEEE Robotics and Automation Society summer school.
-  - The programme covers learned planning models, robot learning, skill adaptation, and constrained sampling for cognitive robots.
+- **Rock Climbing Robots Hackathon** — 29 October – 1 November 2026 · Bordeaux, France · Upcoming
+  - Taking part in a team of six: four PhD students from CDT-D2AIR and two from LAAS-CNRS, Toulouse.
+  - Teams build autonomous robots that climb a vertical wall using only its holds, with separate rankings in simulation (MuJoCo) and on the real robot.
+  - The robots are based on Microban, an open-source small humanoid from the Rhoban team in Bordeaux.
+  - [link] Official Hackathon Page: https://rock-climbing-robots.github.io/
+  - [link] Team GitHub: https://github.com/julialopezgomez/rock-climbing-workshop
+
+- **1st IEEE RAS Summer School: Decision-Making for Cognitive Robots** — 7–11 September 2026 · Frauenwörth Abbey, Chiemsee, Germany
+  - Attended this IEEE Robotics and Automation Society summer school: 20 hours of lectures and 11 hours of labs.
+  - Pitched my research topic: reachability-based motion and manipulation planning.
+  - Lectures and labs on task and motion planning, risk-bounded planning, constrained sampling, humanoid loco-manipulation, behaviour foundation models, and learned planning models, with speakers including Brian Williams (MIT), Marc Toussaint (TU Berlin), Jan Peters (TU Darmstadt), Majid Khadiv (TUM), and Hector Geffner (RWTH Aachen).
+  - [link] Download Certificate: files/IEEE_RAS_summer_school_certificate.pdf
   - [link] Official School Page: https://r8.ieee.org/germany-ras/2026/05/11/ieee-ras-german-summer-schools-2026/
 
 - **ROMANDIC Winter School on Robotic Manipulation of Deformable Objects** — 9–13 February 2026 · Kranjska Gora, Slovenia
